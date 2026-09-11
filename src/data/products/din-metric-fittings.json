@@ -1,0 +1,1980 @@
+{
+  "slug": "din-metric-fittings",
+  "name": "DIN Metric Fittings",
+  "description": "High quality DIN Metric Fittings manufactured to exacting international standards.",
+  "seriesList": [
+    "Straight Series",
+    "Tee",
+    "Elbows",
+    "Ferrules",
+    "Nuts",
+    "Caps",
+    "Hollow Hex Plugs",
+    "Weld Nipples"
+  ],
+  "groups": [
+    {
+      "series": "Straight Series",
+      "slug": "equal-straight-couplings",
+      "name": "Equal Straight Couplings",
+      "description": "High-quality Equal Straight Couplings designed for precision applications.",
+      "products": [
+        {
+          "slug": "equal-straight-couplings",
+          "name": "Equal Straight Couplings",
+          "description": "High-quality Equal Straight Couplings designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "equal-straight-couplings-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Straight Series",
+      "slug": "bulkhead-straight-couplings",
+      "name": "Bulkhead Straight Couplings",
+      "description": "High-quality Bulkhead Straight Couplings designed for precision applications.",
+      "products": [
+        {
+          "slug": "bulkhead-straight-couplings",
+          "name": "Bulkhead Straight Couplings",
+          "description": "High-quality Bulkhead Straight Couplings designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "bulkhead-straight-couplings-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Straight Series",
+      "slug": "welding-connectors",
+      "name": "Welding Connectors",
+      "description": "High-quality Welding Connectors designed for precision applications.",
+      "products": [
+        {
+          "slug": "welding-connectors",
+          "name": "Welding Connectors",
+          "description": "High-quality Welding Connectors designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "welding-connectors-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Straight Series",
+      "slug": "parallel-male-stud-couplings",
+      "name": "Parallel Male Stud Couplings",
+      "description": "High-quality Parallel Male Stud Couplings designed for precision applications.",
+      "products": [
+        {
+          "slug": "parallel-male-stud-couplings",
+          "name": "Parallel Male Stud Couplings",
+          "description": "High-quality Parallel Male Stud Couplings designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "parallel-male-stud-couplings-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Straight Series",
+      "slug": "parallel-female-couplings",
+      "name": "Parallel Female Couplings",
+      "description": "High-quality Parallel Female Couplings designed for precision applications.",
+      "products": [
+        {
+          "slug": "parallel-female-couplings",
+          "name": "Parallel Female Couplings",
+          "description": "High-quality Parallel Female Couplings designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "parallel-female-couplings-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Straight Series",
+      "slug": "swivel-connectors",
+      "name": "Swivel Connectors",
+      "description": "High-quality Swivel Connectors designed for precision applications.",
+      "products": [
+        {
+          "slug": "swivel-connectors",
+          "name": "Swivel Connectors",
+          "description": "High-quality Swivel Connectors designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "swivel-connectors-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Straight Series",
+      "slug": "stand-pipe-adaptors-adapters",
+      "name": "Stand Pipe Adaptors (Adapters)",
+      "description": "High-quality Stand Pipe Adaptors (Adapters) designed for precision applications.",
+      "products": [
+        {
+          "slug": "stand-pipe-adaptors-adapters",
+          "name": "Stand Pipe Adaptors (Adapters)",
+          "description": "High-quality Stand Pipe Adaptors (Adapters) designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "stand-pipe-adaptors-adapters-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Tee",
+      "slug": "equal-tee-unions",
+      "name": "Equal Tee Unions",
+      "description": "High-quality Equal Tee Unions designed for precision applications.",
+      "products": [
+        {
+          "slug": "equal-tee-unions",
+          "name": "Equal Tee Unions",
+          "description": "High-quality Equal Tee Unions designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "equal-tee-unions-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Tee",
+      "slug": "swivel-branch-tee",
+      "name": "Swivel Branch Tee",
+      "description": "High-quality Swivel Branch Tee designed for precision applications.",
+      "products": [
+        {
+          "slug": "swivel-branch-tee",
+          "name": "Swivel Branch Tee",
+          "description": "High-quality Swivel Branch Tee designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "swivel-branch-tee-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Tee",
+      "slug": "swivel-nut-branch-tee",
+      "name": "Swivel Nut Branch Tee",
+      "description": "High-quality Swivel Nut Branch Tee designed for precision applications.",
+      "products": [
+        {
+          "slug": "swivel-nut-branch-tee",
+          "name": "Swivel Nut Branch Tee",
+          "description": "High-quality Swivel Nut Branch Tee designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "swivel-nut-branch-tee-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Tee",
+      "slug": "swivel-run-tee",
+      "name": "Swivel Run Tee",
+      "description": "High-quality Swivel Run Tee designed for precision applications.",
+      "products": [
+        {
+          "slug": "swivel-run-tee",
+          "name": "Swivel Run Tee",
+          "description": "High-quality Swivel Run Tee designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "swivel-run-tee-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Tee",
+      "slug": "swivel-nut-run-tee",
+      "name": "Swivel Nut Run Tee",
+      "description": "High-quality Swivel Nut Run Tee designed for precision applications.",
+      "products": [
+        {
+          "slug": "swivel-nut-run-tee",
+          "name": "Swivel Nut Run Tee",
+          "description": "High-quality Swivel Nut Run Tee designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "swivel-nut-run-tee-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Elbows",
+      "slug": "equal-elbow-unions",
+      "name": "Equal Elbow Unions",
+      "description": "High-quality Equal Elbow Unions designed for precision applications.",
+      "products": [
+        {
+          "slug": "equal-elbow-unions",
+          "name": "Equal Elbow Unions",
+          "description": "High-quality Equal Elbow Unions designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "equal-elbow-unions-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Elbows",
+      "slug": "bulkhead-union-elbows",
+      "name": "Bulkhead Union Elbows",
+      "description": "High-quality Bulkhead Union Elbows designed for precision applications.",
+      "products": [
+        {
+          "slug": "bulkhead-union-elbows",
+          "name": "Bulkhead Union Elbows",
+          "description": "High-quality Bulkhead Union Elbows designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "bulkhead-union-elbows-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Elbows",
+      "slug": "male-stud-elbows",
+      "name": "Male Stud Elbows",
+      "description": "High-quality Male Stud Elbows designed for precision applications.",
+      "products": [
+        {
+          "slug": "male-stud-elbows",
+          "name": "Male Stud Elbows",
+          "description": "High-quality Male Stud Elbows designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "male-stud-elbows-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Elbows",
+      "slug": "swivel-elbows",
+      "name": "Swivel Elbows",
+      "description": "High-quality Swivel Elbows designed for precision applications.",
+      "products": [
+        {
+          "slug": "swivel-elbows",
+          "name": "Swivel Elbows",
+          "description": "High-quality Swivel Elbows designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "swivel-elbows-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Elbows",
+      "slug": "swivel-nut-elbows",
+      "name": "Swivel Nut Elbows",
+      "description": "High-quality Swivel Nut Elbows designed for precision applications.",
+      "products": [
+        {
+          "slug": "swivel-nut-elbows",
+          "name": "Swivel Nut Elbows",
+          "description": "High-quality Swivel Nut Elbows designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/page_683815386335682.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "swivel-nut-elbows-01",
+              "tubeOD": "6",
+              "thread": "M12x1.5",
+              "series": "L"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/page_683815386335682.jpg"
+    },
+    {
+      "series": "Ferrules",
+      "slug": "f-l-ferrules",
+      "name": "F-L Ferrules",
+      "description": "High-quality F-L Ferrules designed for precision applications.",
+      "products": [
+        {
+          "slug": "f-l-ferrules",
+          "name": "F-L Ferrules",
+          "description": "High-quality F-L Ferrules designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/products/f-ferrule.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "",
+              "tubeOD": "6",
+              "thread": "",
+              "ød1": "6.00",
+              "l2length": "9.00",
+              "part number": "F06L-S",
+              "torque n-m": "13-15",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "8",
+              "thread": "",
+              "ød1": "8.00",
+              "l2length": "9.00",
+              "part number": "F08L-S",
+              "torque n-m": "15-18",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "10",
+              "thread": "",
+              "ød1": "10.00",
+              "l2length": "10.00",
+              "part number": "F10L-S",
+              "torque n-m": "25-28",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "12",
+              "thread": "",
+              "ød1": "12.00",
+              "l2length": "10.00",
+              "part number": "F12L-S",
+              "torque n-m": "27-30",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "15",
+              "thread": "",
+              "ød1": "15.00",
+              "l2length": "10.00",
+              "part number": "F15L",
+              "torque n-m": "50-60",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "18",
+              "thread": "",
+              "ød1": "18.00",
+              "l2length": "10.00",
+              "part number": "F18L",
+              "torque n-m": "60-75",
+              "working pressure in bar": "160"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "22",
+              "thread": "",
+              "ød1": "22.00",
+              "l2length": "10.50",
+              "part number": "F22L",
+              "torque n-m": "85-105",
+              "working pressure in bar": "160"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "28",
+              "thread": "",
+              "ød1": "28.00",
+              "l2length": "10.50",
+              "part number": "F28L",
+              "torque n-m": "120-140",
+              "working pressure in bar": "100"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "35",
+              "thread": "",
+              "ød1": "35.00",
+              "l2length": "13.00",
+              "part number": "F35L",
+              "torque n-m": "170-190",
+              "working pressure in bar": "100"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "42",
+              "thread": "",
+              "ød1": "42.00",
+              "l2length": "13.50",
+              "part number": "F42L",
+              "torque n-m": "190-230",
+              "working pressure in bar": "100"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/products/f-ferrule.jpg"
+    },
+    {
+      "series": "Ferrules",
+      "slug": "f-s-ferrules",
+      "name": "F-S Ferrules",
+      "description": "High-quality F-S Ferrules designed for precision applications.",
+      "products": [
+        {
+          "slug": "f-s-ferrules",
+          "name": "F-S Ferrules",
+          "description": "High-quality F-S Ferrules designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/products/f-ferrule.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "",
+              "tubeOD": "6",
+              "thread": "",
+              "ød1": "6.00",
+              "l2length": "9.00",
+              "part number": "F06L-S",
+              "torque n-m": "14-16",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "8",
+              "thread": "",
+              "ød1": "8.00",
+              "l2length": "9.00",
+              "part number": "F08L-S",
+              "torque n-m": "25-28",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "10",
+              "thread": "",
+              "ød1": "10.00",
+              "l2length": "10.00",
+              "part number": "F10L-S",
+              "torque n-m": "27-30",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "12",
+              "thread": "",
+              "ød1": "12.00",
+              "l2length": "10.00",
+              "part number": "F12L-S",
+              "torque n-m": "43-54",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "14",
+              "thread": "",
+              "ød1": "14.00",
+              "l2length": "10.00",
+              "part number": "F14S",
+              "torque n-m": "50-62",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "16",
+              "thread": "",
+              "ød1": "16.00",
+              "l2length": "10.50",
+              "part number": "F16S",
+              "torque n-m": "60-75",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "20",
+              "thread": "",
+              "ød1": "20.00",
+              "l2length": "12.50",
+              "part number": "F20S",
+              "torque n-m": "90-110",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "25",
+              "thread": "",
+              "ød1": "25.00",
+              "l2length": "12.50",
+              "part number": "F25S",
+              "torque n-m": "125-145",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "30",
+              "thread": "",
+              "ød1": "30.00",
+              "l2length": "13.00",
+              "part number": "F30S",
+              "torque n-m": "170-190",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "38",
+              "thread": "",
+              "ød1": "38.00",
+              "l2length": "13.50",
+              "part number": "F38S",
+              "torque n-m": "200-245",
+              "working pressure in bar": "250"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/products/f-ferrule.jpg"
+    },
+    {
+      "series": "Nuts",
+      "slug": "n-l-nuts",
+      "name": "N-L Nuts",
+      "description": "High-quality N-L Nuts designed for precision applications.",
+      "products": [
+        {
+          "slug": "n-l-nuts",
+          "name": "N-L Nuts",
+          "description": "High-quality N-L Nuts designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/products/n-nut.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "",
+              "tubeOD": "6",
+              "thread": "",
+              "hex": "14.00",
+              "ød1": "6.00",
+              "llength": "14.50",
+              "athread": "M12X1.5-6H",
+              "part number": "N06L",
+              "torque n-m": "13-15",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "8",
+              "thread": "",
+              "hex": "17.00",
+              "ød1": "8.00",
+              "llength": "14.50",
+              "athread": "M14X1.5-6H",
+              "part number": "N08L",
+              "torque n-m": "15-18",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "10",
+              "thread": "",
+              "hex": "19.00",
+              "ød1": "10.00",
+              "llength": "15.50",
+              "athread": "M16X1.5-6H",
+              "part number": "N10L",
+              "torque n-m": "25-28",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "12",
+              "thread": "",
+              "hex": "22.00",
+              "ød1": "12.00",
+              "llength": "15.50",
+              "athread": "M18X1.5-6H",
+              "part number": "N12L",
+              "torque n-m": "27-30",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "15",
+              "thread": "",
+              "hex": "27.00",
+              "ød1": "15.00",
+              "llength": "17.00",
+              "athread": "M22X1.5-6H",
+              "part number": "N15L",
+              "torque n-m": "50-60",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "18",
+              "thread": "",
+              "hex": "32.00",
+              "ød1": "18.00",
+              "llength": "18.00",
+              "athread": "M26X1.5-6H",
+              "part number": "N18L",
+              "torque n-m": "60-75",
+              "working pressure in bar": "160"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "22",
+              "thread": "",
+              "hex": "36.00",
+              "ød1": "22.00",
+              "llength": "20.00",
+              "athread": "M30X2.0-6H",
+              "part number": "N22L",
+              "torque n-m": "85-105",
+              "working pressure in bar": "160"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "28",
+              "thread": "",
+              "hex": "41.00",
+              "ød1": "28.00",
+              "llength": "21.00",
+              "athread": "M36X2.0-6H",
+              "part number": "N28L",
+              "torque n-m": "120-140",
+              "working pressure in bar": "100"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "35",
+              "thread": "",
+              "hex": "50.00",
+              "ød1": "35.00",
+              "llength": "24.00",
+              "athread": "M45X2.0-6H",
+              "part number": "N35L",
+              "torque n-m": "170-190",
+              "working pressure in bar": "100"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "42",
+              "thread": "",
+              "hex": "60.00",
+              "ød1": "42.00",
+              "llength": "24.00",
+              "athread": "M52X2.0-6H",
+              "part number": "N42L",
+              "torque n-m": "190-230",
+              "working pressure in bar": "100"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/products/n-nut.jpg"
+    },
+    {
+      "series": "Nuts",
+      "slug": "n-s-nuts",
+      "name": "N-S Nuts",
+      "description": "High-quality N-S Nuts designed for precision applications.",
+      "products": [
+        {
+          "slug": "n-s-nuts",
+          "name": "N-S Nuts",
+          "description": "High-quality N-S Nuts designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/products/n-nut.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "",
+              "tubeOD": "6",
+              "thread": "",
+              "hex": "17.00",
+              "ød1": "6.00",
+              "llength": "16.50",
+              "athread": "M14X1.5-6H",
+              "part number": "N06S",
+              "torque n-m": "14-16",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "8",
+              "thread": "",
+              "hex": "19.00",
+              "ød1": "8.00",
+              "llength": "16.50",
+              "athread": "M16X1.5-6H",
+              "part number": "N08S",
+              "torque n-m": "25-28",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "10",
+              "thread": "",
+              "hex": "22.00",
+              "ød1": "10.00",
+              "llength": "17.50",
+              "athread": "M18X1.5-6H",
+              "part number": "N10S",
+              "torque n-m": "27-30",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "12",
+              "thread": "",
+              "hex": "24.00",
+              "ød1": "12.00",
+              "llength": "17.50",
+              "athread": "M20X1.5-6H",
+              "part number": "N12S",
+              "torque n-m": "43-54",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "14",
+              "thread": "",
+              "hex": "27.00",
+              "ød1": "14.00",
+              "llength": "20.50",
+              "athread": "M22X1.5-6H",
+              "part number": "N14S",
+              "torque n-m": "50-62",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "16",
+              "thread": "",
+              "hex": "30.00",
+              "ød1": "16.00",
+              "llength": "20.50",
+              "athread": "M24X1.5-6H",
+              "part number": "N106S",
+              "torque n-m": "60-75",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "20",
+              "thread": "",
+              "hex": "36.00",
+              "ød1": "20.00",
+              "llength": "24.00",
+              "athread": "M30X2.0-6H",
+              "part number": "N20S",
+              "torque n-m": "90-110",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "25",
+              "thread": "",
+              "hex": "46.00",
+              "ød1": "25.00",
+              "llength": "27.00",
+              "athread": "M36X2.0-6H",
+              "part number": "N25S",
+              "torque n-m": "125-145",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "30",
+              "thread": "",
+              "hex": "50.00",
+              "ød1": "30.00",
+              "llength": "29.00",
+              "athread": "M42X2.0-6H",
+              "part number": "N30S",
+              "torque n-m": "170-190",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "38",
+              "thread": "",
+              "hex": "60.00",
+              "ød1": "38.00",
+              "llength": "32.50",
+              "athread": "M52X2.0-6H",
+              "part number": "N38S",
+              "torque n-m": "200-245",
+              "working pressure in bar": "250"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/products/n-nut.jpg"
+    },
+    {
+      "series": "Caps",
+      "slug": "vka-l-caps",
+      "name": "VKA-L CAPS",
+      "description": "High-quality VKA-L CAPS designed for precision applications.",
+      "products": [
+        {
+          "slug": "vka-l-caps",
+          "name": "VKA-L CAPS",
+          "description": "High-quality VKA-L CAPS designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/products/vka-cap-body.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "",
+              "tubeOD": "6",
+              "thread": "",
+              "l length": "18.50",
+              "ød1": "6.00",
+              "ød": "9.90",
+              "body part number": "XVKA06L",
+              "assembly part number": "VKA06L",
+              "torque n-m": "13-15",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "8",
+              "thread": "",
+              "l length": "18.50",
+              "ød1": "8.00",
+              "ød": "11.90",
+              "body part number": "XVKA08L",
+              "assembly part number": "VKA08L",
+              "torque n-m": "15-18",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "10",
+              "thread": "",
+              "l length": "20.00",
+              "ød1": "10.00",
+              "ød": "13.00",
+              "body part number": "XVKA10L",
+              "assembly part number": "VKA10L",
+              "torque n-m": "25-28",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "12",
+              "thread": "",
+              "l length": "20.50",
+              "ød1": "12.00",
+              "ød": "15.00",
+              "body part number": "XVKA12L",
+              "assembly part number": "VKA12L",
+              "torque n-m": "27-30",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "15",
+              "thread": "",
+              "l length": "20.50",
+              "ød1": "15.00",
+              "ød": "18.00",
+              "body part number": "XVKA15L",
+              "assembly part number": "VKA15L",
+              "torque n-m": "50-60",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "18",
+              "thread": "",
+              "l length": "22.50",
+              "ød1": "18.00",
+              "ød": "21.70",
+              "body part number": "XVKA18L",
+              "assembly part number": "VKA18L",
+              "torque n-m": "60-75",
+              "working pressure in bar": "160"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "22",
+              "thread": "",
+              "l length": "25.00",
+              "ød1": "22.00",
+              "ød": "25.70",
+              "body part number": "XVKA22L",
+              "assembly part number": "VKA22L",
+              "torque n-m": "85-105",
+              "working pressure in bar": "160"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "28",
+              "thread": "",
+              "l length": "25.50",
+              "ød1": "28.00",
+              "ød": "31.50",
+              "body part number": "XVKA28L",
+              "assembly part number": "VKA28L",
+              "torque n-m": "120-140",
+              "working pressure in bar": "100"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "35",
+              "thread": "",
+              "l length": "30.00",
+              "ød1": "35.00",
+              "ød": "39.50",
+              "body part number": "XVKA35L",
+              "assembly part number": "VKA35L",
+              "torque n-m": "170-190",
+              "working pressure in bar": "100"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "42",
+              "thread": "",
+              "l length": "30.00",
+              "ød1": "42.00",
+              "ød": "47.00",
+              "body part number": "XVKA42L",
+              "assembly part number": "VKA42L",
+              "torque n-m": "190-230",
+              "working pressure in bar": "100"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/products/vka-cap-body.jpg"
+    },
+    {
+      "series": "Caps",
+      "slug": "vka-s-caps",
+      "name": "VKA-S CAPS",
+      "description": "High-quality VKA-S CAPS designed for precision applications.",
+      "products": [
+        {
+          "slug": "vka-s-caps",
+          "name": "VKA-S CAPS",
+          "description": "High-quality VKA-S CAPS designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/products/vka-cap-body.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "",
+              "tubeOD": "6",
+              "thread": "",
+              "l length": "18.50",
+              "ød1": "6.00",
+              "ød2": "9.90",
+              "body part number": "XVKA06S",
+              "assembly part number": "VKA06S",
+              "torque n-m": "14-16",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "8",
+              "thread": "",
+              "l length": "18.50",
+              "ød1": "8.00",
+              "ød2": "11.90",
+              "body part number": "XVKA08S",
+              "assembly part number": "VKA08S",
+              "torque n-m": "25-28",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "10",
+              "thread": "",
+              "l length": "20.00",
+              "ød1": "10.00",
+              "ød2": "13.00",
+              "body part number": "XVKA10S",
+              "assembly part number": "VKA10S",
+              "torque n-m": "27-30",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "12",
+              "thread": "",
+              "l length": "20.50",
+              "ød1": "12.00",
+              "ød2": "15.00",
+              "body part number": "XVKA12S",
+              "assembly part number": "VKA12S",
+              "torque n-m": "43-54",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "14",
+              "thread": "",
+              "l length": "22.50",
+              "ød1": "14.00",
+              "ød2": "17.00",
+              "body part number": "XVKA14S",
+              "assembly part number": "VKA14S",
+              "torque n-m": "50-62",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "16",
+              "thread": "",
+              "l length": "23.50",
+              "ød1": "16.00",
+              "ød2": "19.00",
+              "body part number": "XVKA16S",
+              "assembly part number": "VKA16S",
+              "torque n-m": "60-75",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "20",
+              "thread": "",
+              "l length": "28.50",
+              "ød1": "20.00",
+              "ød2": "24.00",
+              "body part number": "XVKA20S",
+              "assembly part number": "VKA20S",
+              "torque n-m": "90-110",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "25",
+              "thread": "",
+              "l length": "29.00",
+              "ød1": "25.00",
+              "ød2": "29.50",
+              "body part number": "XVKA25S",
+              "assembly part number": "VKA25S",
+              "torque n-m": "125-145",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "30",
+              "thread": "",
+              "l length": "30.50",
+              "ød1": "30.00",
+              "ød2": "34.50",
+              "body part number": "XVKA30S",
+              "assembly part number": "VKA30S",
+              "torque n-m": "170-190",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "38",
+              "thread": "",
+              "l length": "33.00",
+              "ød1": "38.00",
+              "ød2": "43.00",
+              "body part number": "XVKA38S",
+              "assembly part number": "VKA38S",
+              "torque n-m": "200-245",
+              "working pressure in bar": "250"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/products/vka-cap-body.jpg"
+    },
+    {
+      "series": "Hollow Hex Plugs",
+      "slug": "vsti-r-hollow-hex-plugs",
+      "name": "VSTI-R Hollow Hex Plugs",
+      "description": "High-quality VSTI-R Hollow Hex Plugs designed for precision applications.",
+      "products": [
+        {
+          "slug": "vsti-r-hollow-hex-plugs",
+          "name": "VSTI-R Hollow Hex Plugs",
+          "description": "High-quality VSTI-R Hollow Hex Plugs designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/products/vsti-r-hollow-hex-plug.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "G1/8\"-28-BSPP-A",
+              "l length": "12.00",
+              "i": "8.00",
+              "ød": "14.00",
+              "s1 a/f hex": "5.00",
+              "part number": "VSTIR1-8\"BSPED",
+              "torque n-m": "20-22",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "G1/4\"-19-BSPP-A",
+              "l length": "17.00",
+              "i": "12.00",
+              "ød": "19.00",
+              "s1 a/f hex": "6.00",
+              "part number": "VSTIR1-4\"BSPED",
+              "torque n-m": "60-66",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "G3/8\"-19-BSPP-A",
+              "l length": "17.00",
+              "i": "12.00",
+              "ød": "22.00",
+              "s1 a/f hex": "8.00",
+              "part number": "VSTIR3-8\"BSPED",
+              "torque n-m": "90-99",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "G1/2\"-14-BSPP-A",
+              "l length": "19.00",
+              "i": "14.00",
+              "ød": "27.00",
+              "s1 a/f hex": "10.00",
+              "part number": "VSTIR1-2\"BSPED",
+              "torque n-m": "130-143",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "G3/4\"-14-BSPP-A",
+              "l length": "21.00",
+              "i": "16.00",
+              "ød": "32.00",
+              "s1 a/f hex": "12.00",
+              "part number": "VSTIR3-4\"BSPED",
+              "torque n-m": "200-220",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "G1\"-11-BSPP-A",
+              "l length": "22.50",
+              "i": "16.00",
+              "ød": "40.00",
+              "s1 a/f hex": "17.00",
+              "part number": "VSTIR1\"BSPED",
+              "torque n-m": "380-418",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "G1-1/4\"-11-BSPP-A",
+              "l length": "22.50",
+              "i": "16.00",
+              "ød": "50.00",
+              "s1 a/f hex": "22.00",
+              "part number": "VSTIR1-1-4\"BSPED",
+              "torque n-m": "500-550",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "G1-1/2\"-11-BSPP-A",
+              "l length": "22.50",
+              "i": "16.00",
+              "ød": "55.00",
+              "s1 a/f hex": "24.00",
+              "part number": "VSTIR1-1-2\"BSPED",
+              "torque n-m": "600-660",
+              "working pressure in bar": "250"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/products/vsti-r-hollow-hex-plug.jpg"
+    },
+    {
+      "series": "Hollow Hex Plugs",
+      "slug": "vsti-m-hollow-hex-plugs",
+      "name": "VSTI-M Hollow Hex Plugs",
+      "description": "High-quality VSTI-M Hollow Hex Plugs designed for precision applications.",
+      "products": [
+        {
+          "slug": "vsti-m-hollow-hex-plugs",
+          "name": "VSTI-M Hollow Hex Plugs",
+          "description": "High-quality VSTI-M Hollow Hex Plugs designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/products/vsti-m-hollow-hex-plug.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "M10X1.0-6g",
+              "l length": "12.00",
+              "i": "8.00",
+              "ød": "14.00",
+              "s1 a/f hex": "5.00",
+              "part number": "VSTI-M10X1.0ED",
+              "torque n-m": "20-22",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "M12X1.5-6g",
+              "l length": "17.00",
+              "i": "12.00",
+              "ød": "17.00",
+              "s1 a/f hex": "6.00",
+              "part number": "VSTI-M12X1.5ED",
+              "torque n-m": "45-49.5",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "M14X1.5-6g",
+              "l length": "17.00",
+              "i": "12.00",
+              "ød": "19.00",
+              "s1 a/f hex": "6.00",
+              "part number": "VSTI-M14X1.5ED",
+              "torque n-m": "60-66",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "M16X1.5-6g",
+              "l length": "17.00",
+              "i": "12.00",
+              "ød": "22.00",
+              "s1 a/f hex": "8.00",
+              "part number": "VSTI-M16X1.5ED",
+              "torque n-m": "80-88",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "M18X1.5-6g",
+              "l length": "17.00",
+              "i": "12.00",
+              "ød": "24.00",
+              "s1 a/f hex": "8.00",
+              "part number": "VSTI-M18X1.5ED",
+              "torque n-m": "100-110",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "M20X1.5-6g",
+              "l length": "19.00",
+              "i": "14.00",
+              "ød": "26.00",
+              "s1 a/f hex": "10.00",
+              "part number": "VSTI-M20X1.5ED",
+              "torque n-m": "140-154",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "M22X1.5-6g",
+              "l length": "19.00",
+              "i": "14.00",
+              "ød": "27.00",
+              "s1 a/f hex": "10.00",
+              "part number": "VSTI-M22X1.5ED",
+              "torque n-m": "150-165",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "M26X1.5-6g",
+              "l length": "21.00",
+              "i": "16.00",
+              "ød": "32.00",
+              "s1 a/f hex": "12.00",
+              "part number": "VSTI-M26X1.5ED",
+              "torque n-m": "200-220",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "M27X2.0-6g",
+              "l length": "21.00",
+              "i": "16.00",
+              "ød": "32.00",
+              "s1 a/f hex": "12.00",
+              "part number": "VSTI-M27X2.0ED",
+              "torque n-m": "200-220",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "M33X2.0-6g",
+              "l length": "22.50",
+              "i": "16.00",
+              "ød": "40.00",
+              "s1 a/f hex": "17.00",
+              "part number": "VSTI-M33X2.0ED",
+              "torque n-m": "380-418",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "M42X2.0-6g",
+              "l length": "22.50",
+              "i": "16.00",
+              "ød": "50.00",
+              "s1 a/f hex": "22.00",
+              "part number": "VSTI-M42X2.0ED",
+              "torque n-m": "500-550",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "",
+              "thread": "",
+              "a thread": "M48X2.0-6g",
+              "l length": "22.50",
+              "i": "16.00",
+              "ød": "55.00",
+              "s1 a/f hex": "24.00",
+              "part number": "VSTI-M48X2.0ED",
+              "torque n-m": "600-660",
+              "working pressure in bar": "250"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/products/vsti-m-hollow-hex-plug.jpg"
+    },
+    {
+      "series": "Weld Nipples",
+      "slug": "wn-l-weld-nipple",
+      "name": "WN-L Weld Nipple",
+      "description": "High-quality WN-L Weld Nipple designed for precision applications.",
+      "products": [
+        {
+          "slug": "wn-l-weld-nipple",
+          "name": "WN-L Weld Nipple",
+          "description": "High-quality WN-L Weld Nipple designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/products/wn-weld-nipple-body.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "",
+              "tubeOD": "6",
+              "thread": "",
+              "ød2": "9.20",
+              "l length": "31.50",
+              "ød1": "6.00",
+              "ød": "3.00",
+              "a thread": "M12X1.5-6H",
+              "s2 hex": "14.00",
+              "body part number": "XWN06L",
+              "assembly part number": "WN06L",
+              "torque n-m": "13-15",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "8",
+              "thread": "",
+              "ød2": "11.20",
+              "l length": "31.50",
+              "ød1": "8.00",
+              "ød": "5.00",
+              "a thread": "M14X1.5-6H",
+              "s2 hex": "17.00",
+              "body part number": "XWN08L",
+              "assembly part number": "WN08L",
+              "torque n-m": "15-18",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "10",
+              "thread": "",
+              "ød2": "14.00",
+              "l length": "32.50",
+              "ød1": "10.00",
+              "ød": "7.00",
+              "a thread": "M16X1.5-6H",
+              "s2 hex": "19.00",
+              "body part number": "XWN10L",
+              "assembly part number": "WN10L",
+              "torque n-m": "25-28",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "12",
+              "thread": "",
+              "ød2": "16.00",
+              "l length": "32.50",
+              "ød1": "12.00",
+              "ød": "8.00",
+              "a thread": "M18X1.5-6H",
+              "s2 hex": "22.00",
+              "body part number": "XWN12L",
+              "assembly part number": "WN12L",
+              "torque n-m": "27-30",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "15",
+              "thread": "",
+              "ød2": "18.20",
+              "l length": "34.50",
+              "ød1": "15.00",
+              "ød": "10.00",
+              "a thread": "M22X1.5-6H",
+              "s2 hex": "27.00",
+              "body part number": "XWN15L",
+              "assembly part number": "WN15L",
+              "torque n-m": "50-60",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "18",
+              "thread": "",
+              "ød2": "21.50",
+              "l length": "36.50",
+              "ød1": "18.00",
+              "ød": "13.00",
+              "a thread": "M26X1.5-6H",
+              "s2 hex": "32.00",
+              "body part number": "XWN18L",
+              "assembly part number": "WN18L",
+              "torque n-m": "60-75",
+              "working pressure in bar": "160"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "22",
+              "thread": "",
+              "ød2": "25.70",
+              "l length": "38.00",
+              "ød1": "22.00",
+              "ød": "17.00",
+              "a thread": "M30X2.0-6H",
+              "s2 hex": "36.00",
+              "body part number": "XWN22L",
+              "assembly part number": "WN22L",
+              "torque n-m": "85-105",
+              "working pressure in bar": "160"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "28",
+              "thread": "",
+              "ød2": "31.50",
+              "l length": "42.50",
+              "ød1": "28.00",
+              "ød": "23.00",
+              "a thread": "M36X2.0-6H",
+              "s2 hex": "41.00",
+              "body part number": "XWN28L",
+              "assembly part number": "WN28L",
+              "torque n-m": "120-140",
+              "working pressure in bar": "100"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "35",
+              "thread": "",
+              "ød2": "40.00",
+              "l length": "49.50",
+              "ød1": "35.00",
+              "ød": "29.00",
+              "a thread": "M45X2.0-6H",
+              "s2 hex": "50.00",
+              "body part number": "XWN35L",
+              "assembly part number": "WN35L",
+              "torque n-m": "170-190",
+              "working pressure in bar": "100"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "42",
+              "thread": "",
+              "ød2": "47.50",
+              "l length": "49.00",
+              "ød1": "42.00",
+              "ød": "36.00",
+              "a thread": "M52X2.0-6H",
+              "s2 hex": "60.00",
+              "body part number": "XWN42L",
+              "assembly part number": "WN42L",
+              "torque n-m": "190-230",
+              "working pressure in bar": "100"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/products/wn-weld-nipple-body.jpg"
+    },
+    {
+      "series": "Weld Nipples",
+      "slug": "wn-s-weld-nipple",
+      "name": "WN-S Weld Nipple",
+      "description": "High-quality WN-S Weld Nipple designed for precision applications.",
+      "products": [
+        {
+          "slug": "wn-s-weld-nipple",
+          "name": "WN-S Weld Nipple",
+          "description": "High-quality WN-S Weld Nipple designed for precision applications.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "DIN Metric Fittings",
+            "tubeODRange": "Various",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/products/wn-weld-nipple-body.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "",
+              "tubeOD": "6",
+              "thread": "",
+              "ød2": "9.90",
+              "l length": "31.50",
+              "ød1": "6.00",
+              "ød": "3.00",
+              "a thread": "M14X1.5-6H",
+              "s2 hex": "17.00",
+              "body part number": "XWN06S",
+              "assembly part number": "WN06S",
+              "torque n-m": "14-16",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "8",
+              "thread": "",
+              "ød2": "11.90",
+              "l length": "31.50",
+              "ød1": "8.00",
+              "ød": "5.00",
+              "a thread": "M16X1.5-6H",
+              "s2 hex": "19.00",
+              "body part number": "XWN08S",
+              "assembly part number": "WN08S",
+              "torque n-m": "25-28",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "10",
+              "thread": "",
+              "ød2": "14.00",
+              "l length": "32.50",
+              "ød1": "10.00",
+              "ød": "7.00",
+              "a thread": "M18X1.5-6H",
+              "s2 hex": "22.00",
+              "body part number": "XWN10S",
+              "assembly part number": "WN10S",
+              "torque n-m": "27-30",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "12",
+              "thread": "",
+              "ød2": "16.30",
+              "l length": "33.50",
+              "ød1": "12.00",
+              "ød": "8.00",
+              "a thread": "M20X1.5-6H",
+              "s2 hex": "24.00",
+              "body part number": "XWN12S",
+              "assembly part number": "WN12S",
+              "torque n-m": "43-54",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "14",
+              "thread": "",
+              "ød2": "17.00",
+              "l length": "39.50",
+              "ød1": "14.00",
+              "ød": "10.00",
+              "a thread": "M22X1.5-6H",
+              "s2 hex": "27.00",
+              "body part number": "XWN14S",
+              "assembly part number": "WN14S",
+              "torque n-m": "50-62",
+              "working pressure in bar": "630"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "16",
+              "thread": "",
+              "ød2": "19.50",
+              "l length": "38.00",
+              "ød1": "16.00",
+              "ød": "11.00",
+              "a thread": "M24X1.5-6H",
+              "s2 hex": "30.00",
+              "body part number": "XWN16S",
+              "assembly part number": "WN16S",
+              "torque n-m": "60-75",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "20",
+              "thread": "",
+              "ød2": "24.00",
+              "l length": "44.00",
+              "ød1": "20.00",
+              "ød": "14.00",
+              "a thread": "M30X2.0-6H",
+              "s2 hex": "36.00",
+              "body part number": "XWN20S",
+              "assembly part number": "WN20S",
+              "torque n-m": "90-110",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "25",
+              "thread": "",
+              "ød2": "29.00",
+              "l length": "49.00",
+              "ød1": "25.00",
+              "ød": "17.00",
+              "a thread": "M36X2.0-6H",
+              "s2 hex": "46.00",
+              "body part number": "XWN25S",
+              "assembly part number": "WN25S",
+              "torque n-m": "125-145",
+              "working pressure in bar": "400"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "30",
+              "thread": "",
+              "ød2": "35.00",
+              "l length": "52.00",
+              "ød1": "30.00",
+              "ød": "22.00",
+              "a thread": "M42X2.0-6H",
+              "s2 hex": "50.00",
+              "body part number": "XWN30S",
+              "assembly part number": "WN30S",
+              "torque n-m": "170-190",
+              "working pressure in bar": "250"
+            },
+            {
+              "partNo": "",
+              "tubeOD": "38",
+              "thread": "",
+              "ød2": "43.00",
+              "l length": "56.50",
+              "ød1": "38.00",
+              "ød": "28.00",
+              "a thread": "M52X2.0-6H",
+              "s2 hex": "60.00",
+              "body part number": "XWN38S",
+              "assembly part number": "WN38S",
+              "torque n-m": "200-245",
+              "working pressure in bar": "250"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/products/wn-weld-nipple-body.jpg"
+    }
+  ]
+}

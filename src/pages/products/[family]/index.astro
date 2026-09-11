@@ -1,0 +1,83 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import TopBar from '../../../components/TopBar.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import ProductBreadcrumb from '../../../components/products/ProductBreadcrumb.astro';
+import ProductSidebar from '../../../components/products/ProductSidebar.astro';
+import ProductGroupCard from '../../../components/products/ProductGroupCard.astro';
+import { getAllProductFamilies } from '../../../utils/productData';
+import type { ProductFamily } from '../../../types/product';
+
+export async function getStaticPaths() {
+  const families = getAllProductFamilies();
+  return families.map((family) => ({
+    params: { family: family.slug },
+    props: { family },
+  }));
+}
+
+const { family } = Astro.props as { family: ProductFamily };
+
+// The default series to show is the first one in the list.
+const defaultSeries = family.seriesList[0];
+const defaultGroups = family.groups.filter(g => g.series === defaultSeries);
+---
+
+<Layout title={`${family.name} | HIDROPEX`}>
+  <TopBar />
+  <Header />
+
+  <main class="section section-bg-gray" style="min-height: 80vh; padding-top: 4rem;">
+    <div class="container">
+      
+      <ProductBreadcrumb paths={[
+        { name: family.name }
+      ]} />
+
+      <div style="margin-bottom: 3rem;">
+        <h1 class="text-3xl text-primary" style="margin-bottom: 1rem; font-weight: 300;">{family.name.toUpperCase()}</h1>
+        <p class="text-sm text-muted" style="max-width: 800px;">{family.description}</p>
+      </div>
+
+      <div class="product-layout-wrapper">
+        <!-- Sidebar with right divider -->
+        <div class="sidebar-wrapper">
+          <ProductSidebar 
+            familySlug={family.slug} 
+            seriesList={family.seriesList} 
+            activeSeries={defaultSeries} 
+          />
+        </div>
+        
+        <!-- Product content -->
+        <div class="content-wrapper">
+          <div class="grid grid-3 grid-2-mobile gap-4">
+            {defaultGroups.map((group) => {
+              const seriesSlug = group.series.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+              return (
+                <ProductGroupCard 
+                  name={group.name}
+                  url={`/products/${family.slug}/${seriesSlug}/${group.slug}`}
+                  imageUrl={group.groupImageUrl}
+                  actionText="VIEW PRODUCTS ↗"
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .flex-grow { flex-grow: 1; width: 100%; }
+  
+  @media (min-width: 768px) {
+    .md-flex-row { flex-direction: row; }
+  }
+</style>

@@ -1,0 +1,92 @@
+---
+import type { DimensionalData } from '../../types/product';
+
+interface Props {
+  data: DimensionalData[];
+}
+
+const { data } = Astro.props;
+
+if (!data || data.length === 0) {
+  return null;
+}
+
+// Extract all unique keys from the data to form table headers
+const allKeys = Array.from(new Set(data.flatMap(row => Object.keys(row))));
+
+// Sort keys: tubeOD first, partNo second, thread third, rest alphabetically
+const sortedKeys = allKeys.sort((a, b) => {
+  const order = ['tubeOD', 'partNo', 'thread'];
+  const indexA = order.indexOf(a);
+  const indexB = order.indexOf(b);
+  
+  if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+  if (indexA !== -1) return -1;
+  if (indexB !== -1) return 1;
+  return a.localeCompare(b);
+});
+
+// Format header text (e.g., tubeOD -> TUBE O.D., partNo -> PART NO.)
+function formatHeader(key: string) {
+  if (key === 'tubeOD') return 'TUBE O.D.';
+  if (key === 'partNo') return 'PART NO.';
+  if (key === 'thread') return 'THREAD';
+  return key.toUpperCase();
+}
+---
+
+<div class="table-container" style="overflow-x: auto; margin-top: 3rem; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm); position: relative;">
+  <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.875rem; min-width: 600px;">
+    <thead>
+      <tr style="background-color: var(--color-navy-dark); color: white;">
+        {sortedKeys.map((key, i) => (
+          <th class={i === 0 ? 'sticky-col th-sticky' : ''} style="padding: 1rem; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase;">
+            {formatHeader(key)}
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {data.map((row, index) => {
+        const rowBg = index % 2 === 0 ? 'white' : 'var(--color-bg-gray)';
+        return (
+          <tr style={`background-color: ${rowBg}; border-top: 1px solid var(--color-border-color);`}>
+            {sortedKeys.map((key, i) => (
+              <td class={i === 0 ? 'sticky-col' : ''} style={`padding: 1rem; color: var(--color-navy); ${i === 0 ? `background-color: ${rowBg};` : ''}`}>
+                {row[key] || '-'}
+              </td>
+            ))}
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .table-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  .table-container::-webkit-scrollbar-track {
+    background: var(--color-bg-gray); 
+  }
+  .table-container::-webkit-scrollbar-thumb {
+    background: #c0c8d1; 
+    border-radius: 4px;
+  }
+  .table-container::-webkit-scrollbar-thumb:hover {
+    background: #a0a8b1; 
+  }
+  
+  .sticky-col {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.05); /* subtle shadow to separate from scrolling content */
+  }
+  
+  .th-sticky {
+    background-color: var(--color-navy-dark) !important;
+    z-index: 11; /* higher than td */
+  }
+</style>

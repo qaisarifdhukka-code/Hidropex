@@ -1,0 +1,36 @@
+---
+interface Props {
+  paths: { name: string; url?: string }[];
+}
+
+const { paths } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" style="margin-bottom: 2rem;">
+  <ol class="flex items-center text-xs" style="flex-wrap: wrap;">
+    <li class="flex items-center">
+      <a href="/products" class="text-muted hover-accent" style="text-decoration: none;">PRODUCTS</a>
+    </li>
+    {paths.map((path, index) => (
+      <li class="flex items-center">
+        <span class="text-muted" style="margin: 0 0.5rem;">/</span>
+        {path.url ? (
+          <a href={path.url} class="text-muted hover-accent" style="text-decoration: none;">
+            {path.name.toUpperCase()}
+          </a>
+        ) : (
+          <span class="text-primary font-bold">{path.name.toUpperCase()}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .hover-accent {
+    transition: color 0.2s ease;
+  }
+  .hover-accent:hover {
+    color: var(--color-accent) !important;
+  }
+</style>

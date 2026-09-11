@@ -1,0 +1,158 @@
+---
+interface Props {
+  familySlug: string;
+  seriesList: string[];
+  activeSeries: string;
+}
+
+const { familySlug, seriesList, activeSeries } = Astro.props;
+
+// Convert series name to a URL-friendly format
+function toSlug(name: string) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+}
+---
+
+<!-- Desktop Sidebar -->
+<aside class="product-sidebar hidden md-block" style="align-self: stretch;">
+  <div class="sidebar-sticky" style="position: sticky; top: 6rem;">
+    <!-- Label with full-width blue underline -->
+    <div style="padding: 0 1rem 0.875rem 1rem; border-bottom: 2px solid var(--color-primary); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary); flex-shrink: 0;">
+        <line x1="8" y1="6" x2="21" y2="6"></line>
+        <line x1="8" y1="12" x2="21" y2="12"></line>
+        <line x1="8" y1="18" x2="21" y2="18"></line>
+        <line x1="3" y1="6" x2="3.01" y2="6"></line>
+        <line x1="3" y1="12" x2="3.01" y2="12"></line>
+        <line x1="3" y1="18" x2="3.01" y2="18"></line>
+      </svg>
+      <h4 class="text-xs" style="margin: 0; color: var(--color-primary); font-weight: 700; letter-spacing: 0.1em;">SERIES NAVIGATION</h4>
+    </div>
+    <nav class="flex flex-col sidebar-nav-container">
+      {seriesList.map((series) => {
+        const isActive = series === activeSeries;
+        const href = `/products/${familySlug}/${toSlug(series)}`;
+        return (
+          <a
+            href={href}
+            class={`sidebar-link ${isActive ? 'active' : ''}`}
+          >
+            {series}
+          </a>
+        );
+      })}
+    </nav>
+  </div>
+</aside>
+
+<!-- Mobile Accordion/Dropdown -->
+<div class="mobile-sidebar-nav md-hidden" style="margin-bottom: 2rem; width: 100%; position: relative; z-index: 40;">
+  <details class="mobile-nav-details" style="width: 100%;">
+    <summary class="mobile-nav-summary flex justify-between items-center" style="background: white; padding: 1rem; border: 1px solid var(--color-border-color); cursor: pointer; box-shadow: var(--shadow-card); width: 100%;">
+      <div class="flex flex-col">
+        <span class="text-xs text-muted" style="margin-bottom: 0.25rem;">FILTER BY SERIES</span>
+        <span style="font-weight: 700; color: var(--color-primary);">{activeSeries}</span>
+      </div>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </summary>
+    <div class="mobile-nav-menu" style="position: absolute; top: 100%; left: 0; width: 100%; border: 1px solid var(--color-border-color); border-top: none; background: white; box-shadow: var(--shadow-card);">
+      {seriesList.map((series) => {
+        const isActive = series === activeSeries;
+        const href = `/products/${familySlug}/${toSlug(series)}`;
+        if (isActive) return null; // Hide active from dropdown list
+        return (
+          <a
+            href={href}
+            class="mobile-nav-link"
+            style="display: block; padding: 0.75rem 1rem; border-bottom: 1px solid var(--color-bg-gray); text-decoration: none; color: var(--color-navy); font-weight: 500;"
+          >
+            {series}
+          </a>
+        );
+      })}
+    </div>
+  </details>
+</div>
+
+<style>
+  .product-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    padding-right: 0; /* Attach directly to the content edge */
+  }
+  
+  .sidebar-nav-container {
+    border: 1px solid var(--color-border-color);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background-color: var(--color-bg-white);
+    box-shadow: var(--shadow-card);
+  }
+
+  .sidebar-link {
+    display: block;
+    padding: 0.6rem 1rem;
+    color: var(--color-navy-dark);
+    text-decoration: none;
+    font-size: 0.75rem; /* smaller size as requested */
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all var(--transition-fast);
+    border-bottom: 1px solid var(--color-border-color);
+  }
+  
+  .sidebar-link:last-child {
+    border-bottom: none;
+  }
+  
+  .sidebar-link:hover {
+    background-color: var(--color-bg-gray);
+    color: var(--color-primary);
+  }
+  
+  .sidebar-link.active {
+    background-color: var(--color-primary);
+    color: var(--color-bg-white) !important;
+  }
+
+  .hidden { display: none; }
+  
+  @media (min-width: 768px) {
+    .md-block { display: block !important; }
+    .md-hidden { display: none !important; }
+  }
+  
+  @media (max-width: 767px) {
+    .md-hidden { display: block !important; }
+    .md-block { display: none !important; }
+  }
+
+  /* Mobile summary tweak to remove default marker */
+  .mobile-nav-details > summary {
+    list-style: none;
+  }
+  .mobile-nav-details > summary::-webkit-details-marker {
+    display: none;
+  }
+  .mobile-nav-link:hover {
+    background-color: var(--color-bg-gray) !important;
+    color: var(--color-primary) !important;
+  }
+</style>
+
+<script>
+  // Close mobile details accordion when clicking outside of it
+  if (typeof document !== 'undefined') {
+    document.addEventListener('click', (event) => {
+      const details = document.querySelector('.mobile-nav-details');
+      if (details && details.hasAttribute('open')) {
+        const isClickInside = details.contains(event.target as Node);
+        if (!isClickInside) {
+          details.removeAttribute('open');
+        }
+      }
+    });
+  }
+</script>

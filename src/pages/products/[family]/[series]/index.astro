@@ -1,0 +1,93 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import TopBar from '../../../../components/TopBar.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import ProductBreadcrumb from '../../../../components/products/ProductBreadcrumb.astro';
+import ProductSidebar from '../../../../components/products/ProductSidebar.astro';
+import ProductGroupCard from '../../../../components/products/ProductGroupCard.astro';
+import { getAllProductFamilies } from '../../../../utils/productData';
+import type { ProductFamily } from '../../../../types/product';
+
+export async function getStaticPaths() {
+  const families = getAllProductFamilies();
+  const paths: any[] = [];
+  
+  families.forEach((family) => {
+    family.seriesList.forEach((series) => {
+      const seriesSlug = series.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+      paths.push({
+        params: { family: family.slug, series: seriesSlug },
+        props: { family, seriesName: series },
+      });
+    });
+  });
+  
+  return paths;
+}
+
+const { family, seriesName } = Astro.props;
+
+// Filter groups that belong to this series
+const activeGroups = family.groups.filter(g => g.series === seriesName);
+---
+
+<Layout title={`${seriesName} | ${family.name} | HIDROPEX`}>
+  <TopBar />
+  <Header />
+
+  <main class="section section-bg-gray" style="min-height: 80vh; padding-top: 4rem;">
+    <div class="container">
+      
+      <ProductBreadcrumb paths={[
+        { name: family.name, url: `/products/${family.slug}` },
+        { name: seriesName }
+      ]} />
+
+      <div style="margin-bottom: 3rem;">
+        <h1 class="text-3xl text-primary" style="margin-bottom: 1rem; font-weight: 300;">{family.name.toUpperCase()} - {seriesName.toUpperCase()}</h1>
+        <p class="text-sm text-muted" style="max-width: 800px;">Browse our range of product groups within the {seriesName} category.</p>
+      </div>
+
+      <div class="product-layout-wrapper">
+        <div class="sidebar-wrapper">
+          <ProductSidebar 
+            familySlug={family.slug} 
+            seriesList={family.seriesList} 
+            activeSeries={seriesName} 
+          />
+        </div>
+        
+        <div class="content-wrapper">
+          {activeGroups.length > 0 ? (
+            <div class="grid grid-3 grid-2-mobile gap-4">
+              {activeGroups.map((group) => (
+                <ProductGroupCard 
+                  name={group.name}
+                  url={`/products/${family.slug}/${Astro.params.series}/${group.slug}`}
+                  imageUrl={group.groupImageUrl}
+                  actionText="VIEW PRODUCTS ↗"
+                />
+              ))}
+            </div>
+          ) : (
+            <div style="padding: 3rem; text-align: center; background: white; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm);">
+              <p class="text-muted">No product groups found for this series yet.</p>
+            </div>
+          )}
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .flex-grow { flex-grow: 1; width: 100%; }
+  
+  @media (min-width: 768px) {
+    .md-flex-row { flex-direction: row; }
+  }
+</style>

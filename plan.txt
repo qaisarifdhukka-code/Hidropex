@@ -1,0 +1,612 @@
+We are now moving to the PRODUCT section of the Hy-Tech Engineers website.
+
+IMPORTANT:
+Before writing or modifying production code, Phase 1 is ONLY to create the UI prototype for the product pages. Do not implement backend functionality, database logic, real product search, or dynamic data yet.
+
+The UI prototype must be finalized first. Once the UI is approved, we will move to the next phase.
+
+==================================================
+1. PROJECT CONTEXT
+==================================================
+
+This is a new website for Hy-Tech Engineers Ltd., an industrial manufacturer of hydraulic/fluid connection fittings.
+
+The current approved homepage design is already finalized.
+
+IMPORTANT UI RULE:
+The PRODUCT pages must follow the SAME visual language, design system, typography, spacing, colors, buttons, borders, cards, navigation behavior, and overall visual quality as the CURRENT NEW WEBSITE.
+
+Do NOT copy the visual design of the old Hy-Tech website.
+
+The old website is being used ONLY as a reference for:
+- Product taxonomy
+- Product hierarchy
+- Product information
+- Existing product structure
+- Technical specifications
+- Product navigation logic
+
+The CURRENT NEW WEBSITE is the ONLY visual/UI reference.
+
+The goal is:
+Old website's PRODUCT INFORMATION STRUCTURE
++
+New website's APPROVED UI DESIGN SYSTEM
+
+==================================================
+2. EXISTING PRODUCT STRUCTURE
+==================================================
+
+Hy-Tech currently has four main product families:
+
+1. DIN Metric Fittings
+2. JIC Tube Fittings
+3. Conversion Fittings
+4. O Ring Face Seal (ORFS) Fittings
+
+We are NOT inventing new product families.
+
+The new website should preserve the existing product catalogue structure.
+
+Each main product family contains multiple series/sub-categories.
+
+Example:
+
+DIN Metric Fittings
+    ├── Straight Series
+    ├── Tee
+    ├── Elbows
+    ├── Ferrules
+    ├── Nuts
+    ├── Caps
+    ├── Hollow Hex Plugs
+    └── Weld Nipples
+
+The exact existing product taxonomy should be preserved when implementing the prototype.
+
+==================================================
+3. PRODUCT PAGE HIERARCHY
+==================================================
+
+We will have three main levels:
+
+LEVEL 1 — PRODUCT FAMILY / CATEGORY HUB
+
+Example:
+DIN Metric Fittings
+
+This page allows users to browse the different series within that product family.
+
+LEVEL 2 — PRODUCT GROUP
+
+Example:
+Straight Series
+    → Equal Straight Couplings
+    → Bulkhead Straight Couplings
+    → Welding Connectors
+    → etc.
+
+This page displays the actual product groups belonging to that series.
+
+LEVEL 3 — INDIVIDUAL PRODUCT
+
+Example:
+G-L-Straight Coupling
+
+This is the technical product detail page.
+
+The hierarchy must remain clear through breadcrumbs and navigation.
+
+Example:
+
+Products
+→ DIN Metric Fittings
+→ Straight Series
+→ Equal Straight Couplings
+→ G-L-Straight Coupling
+
+==================================================
+4. CATEGORY HUB UI
+==================================================
+
+For a main product family such as:
+
+DIN Metric Fittings
+
+The page should contain:
+
+- Breadcrumb
+- Product family title
+- Short technical introduction
+- Series navigation
+- Product group grid/list
+
+The existing old website uses a left sidebar.
+
+We can preserve the FUNCTION of this sidebar, but DO NOT copy the old website's styling.
+
+The new sidebar/navigation must use the current approved website's design system.
+
+The sidebar should allow users to move between:
+
+- Straight Series
+- Tee
+- Elbows
+- Ferrules
+- Nuts
+- Caps
+- Hollow Hex Plugs
+- Weld Nipples
+- etc.
+
+The active series must be visually obvious.
+
+The main content area displays the product groups.
+
+Each product group should have:
+
+- Product/technical image
+- Product group name
+- Short information where useful
+- Clear action such as "View Products"
+
+Do not make these look like generic SaaS feature cards.
+
+This is an INDUSTRIAL PRODUCT CATALOGUE.
+
+The design should feel:
+- Technical
+- Precise
+- Clean
+- Structured
+- Professional
+- Engineering-focused
+
+==================================================
+5. PRODUCT GROUP PAGE
+==================================================
+
+When a user selects a product group such as:
+
+Equal Straight Couplings
+
+they should reach a page containing the specific products in that group.
+
+Example:
+
+Equal Straight Couplings
+    ├── G-L-Straight Coupling
+    ├── G-S-Straight Coupling
+    └── other existing variants
+
+The page should maintain:
+
+- Breadcrumbs
+- Product family context
+- Series context
+- Product group title
+- Product grid/list
+- Technical/product images
+- Product names
+- View Product action
+
+Again, preserve the existing product information hierarchy.
+
+==================================================
+6. INDIVIDUAL PRODUCT DETAIL PAGE
+==================================================
+
+This is the most technically important product page.
+
+Example:
+
+G-L-Straight Coupling
+
+The layout should be a professional engineering/product-detail layout.
+
+Desktop:
+
+LEFT:
+Technical drawing / product visual
+
+RIGHT:
+Product information + specifications + actions
+
+The page should include:
+
+1. Breadcrumbs
+
+Example:
+
+Products
+→ DIN Metric Fittings
+→ Straight Series
+→ Equal Straight Couplings
+→ G-L-Straight Coupling
+
+2. Product title
+
+3. Short product description
+
+4. Technical drawing / blueprint
+
+The technical drawing should support a high-quality viewing experience.
+
+5. Product visual toggle where applicable
+
+The old product structure contains concepts such as:
+
+- Body Part
+- Assembly Part
+
+If the specific product has both, the UI should allow switching between them.
+
+6. Zoom / enlarged technical drawing
+
+Provide an appropriate zoom/lightbox interaction for technical drawings.
+
+7. Technical specifications
+
+Examples:
+
+- Category
+- Tube O.D.
+- Part Type
+- Thread
+- Dimensions
+- Material
+- Other available technical parameters
+
+Do NOT invent specifications that do not exist in the source product data.
+
+8. Technical specification table
+
+The specification area should be highly readable and suitable for engineers.
+
+9. CTA:
+
+REQUEST A QUOTE
+
+10. CTA:
+
+DOWNLOAD BROCHURE / CATALOGUE
+
+The CTA should visually match the existing approved website.
+
+==================================================
+7. TECHNICAL TABLES
+==================================================
+
+Some individual products contain detailed dimensional tables.
+
+For example:
+
+Tube O.D.
+Dimensions
+Thread
+Part Number
+Quantity / Packaging
+etc.
+
+These tables are important and should NOT be converted into decorative cards.
+
+They should remain proper technical tables.
+
+Requirements:
+
+- Desktop-friendly
+- Mobile responsive
+- Clear column headings
+- Good readability
+- Horizontal scrolling on small screens if required
+- No unnecessary visual decoration
+
+The goal is engineering usability.
+
+==================================================
+8. PRODUCT NAVIGATION
+==================================================
+
+The user must always understand where they are in the catalogue.
+
+Use breadcrumbs throughout the product hierarchy.
+
+Example:
+
+Products
+→ DIN Metric Fittings
+→ Nuts
+→ N-L Nuts
+
+The product navigation should make it easy to:
+
+- Go back to the product family
+- Switch series
+- Browse another product group
+- Return to Products
+
+Do not force the user to repeatedly return to the homepage.
+
+==================================================
+9. HEADER + GLOBAL NAVIGATION
+==================================================
+
+The existing NEW website header is already approved.
+
+Do NOT redesign the header.
+
+Keep the current header design and connect the Products navigation to the new product system.
+
+The primary navigation currently follows the approved website structure:
+
+Products
+Capabilities
+Industries
+Company
+Resources
+
+Primary CTA:
+
+Request a Quote
+
+The Products menu should provide access to the four product families:
+
+- DIN Metric Fittings
+- JIC Tube Fittings
+- Conversion Fittings
+- O Ring Face Seal (ORFS) Fittings
+
+The Products menu should work as the entry point into the catalogue.
+
+Do not create a completely separate navigation system for product pages.
+
+The product pages must feel like a natural continuation of the approved website.
+
+==================================================
+10. PRODUCT SEARCH / FUTURE FUNCTIONALITY
+==================================================
+
+The website does NOT currently have a backend.
+
+Therefore, during Phase 1:
+
+DO NOT build:
+- Backend search
+- Database
+- API
+- CMS
+- Authentication
+- Dynamic product management
+
+If a product search UI is required in the prototype, create ONLY the frontend interaction/visual prototype.
+
+The actual product data/search system can be implemented later if required.
+
+==================================================
+11. RESPONSIVE UX
+==================================================
+
+The product catalogue must work properly on:
+
+- Desktop
+- Tablet
+- Mobile
+
+Desktop can use:
+
+Sidebar + Content
+
+Mobile should NOT simply squeeze the desktop sidebar.
+
+Instead, convert the series navigation into an appropriate mobile pattern such as:
+
+- Dropdown
+- Accordion
+- Horizontal selector
+- Drawer
+
+Choose whichever fits the approved design system best.
+
+Technical tables should become horizontally scrollable where necessary.
+
+==================================================
+12. SEO STRUCTURE
+==================================================
+
+The product architecture must be SEO-friendly.
+
+Each important product family, product group, and individual product should have its own crawlable URL.
+
+Use semantic HTML and proper heading hierarchy.
+
+Each product page should support:
+
+- Unique page title
+- Unique meta description
+- H1
+- Logical H2/H3 hierarchy
+- Descriptive URLs
+- Breadcrumb structured data where appropriate
+- Product structured data where the available information supports it
+- Image alt text
+- Canonical URLs
+
+Do not sacrifice UX for SEO.
+
+The product pages should be built as real HTML content, not as content hidden inside unnecessary JavaScript.
+
+==================================================
+13. PERFORMANCE
+==================================================
+
+This is an industrial catalogue website with potentially many product images and technical drawings.
+
+The frontend should prioritize:
+
+- Fast initial load
+- Optimized images
+- Lazy loading where appropriate
+- Responsive images
+- Minimal JavaScript
+- Good Core Web Vitals
+- Accessible HTML
+- Avoid unnecessary client-side rendering
+
+==================================================
+14. DESIGN DIRECTION
+==================================================
+
+VERY IMPORTANT:
+
+The NEW APPROVED WEBSITE UI is the source of truth for visual design.
+
+Use:
+
+- Existing typography
+- Existing color system
+- Existing button styles
+- Existing spacing
+- Existing borders
+- Existing card language
+- Existing section headings
+- Existing header/footer
+- Existing responsive behavior
+
+Do NOT copy:
+
+- Old Hy-Tech website's blue sidebar styling
+- Old website's card styling
+- Old website's typography
+- Old website's outdated layout
+- Old website's visual appearance
+
+We are modernizing the EXPERIENCE while preserving the PRODUCT INFORMATION ARCHITECTURE.
+
+Think:
+
+"Modern industrial engineering catalogue"
+
+NOT:
+
+"Modern SaaS dashboard"
+
+==================================================
+15. PHASE 1 — UI PROTOTYPE ONLY
+==================================================
+
+First phase objective:
+
+BUILD ONLY THE FRONTEND UI PROTOTYPE.
+
+Start with representative pages:
+
+1. Product Family / Category Hub
+   Example:
+   DIN Metric Fittings
+
+2. Product Group Page
+   Example:
+   Equal Straight Couplings
+
+3. Individual Product Detail
+   Example:
+   G-L-Straight Coupling
+
+Use realistic existing Hy-Tech product information where available.
+
+The purpose is to validate:
+
+- Layout
+- Navigation
+- Product hierarchy
+- Sidebar/mobile navigation
+- Product cards
+- Technical detail layout
+- Technical tables
+- Breadcrumbs
+- CTA placement
+- Image/technical drawing behavior
+- Responsive behavior
+
+DO NOT build the entire product catalogue initially.
+
+First make these representative pages visually correct.
+
+Once the UI prototype is approved, we will expand the same templates to the remaining product families and products.
+
+==================================================
+16. IMPORTANT DEVELOPMENT RULE
+==================================================
+
+Before making major implementation decisions:
+
+Analyze the existing project structure and current approved website components.
+
+Reuse existing components where appropriate.
+
+Do not create a second design system.
+
+Do not redesign the homepage.
+
+Do not modify approved sections unnecessarily.
+
+The Product section must integrate into the existing website.
+
+==================================================
+17. FINAL USER JOURNEY
+==================================================
+
+The intended product journey is:
+
+HEADER
+    ↓
+PRODUCTS
+    ↓
+PRODUCT FAMILY
+    ↓
+SERIES
+    ↓
+PRODUCT GROUP
+    ↓
+INDIVIDUAL PRODUCT
+    ↓
+TECHNICAL DRAWING + SPECIFICATIONS
+    ↓
+REQUEST A QUOTE / DOWNLOAD CATALOGUE
+
+The user should always know:
+
+"What product am I viewing?"
+"Where is it in the catalogue?"
+"What are its specifications?"
+"How can I request it?"
+
+==================================================
+PHASE 1 SUCCESS CRITERIA
+==================================================
+
+Do not consider Phase 1 complete until:
+
+- Product navigation is clear
+- Product hierarchy is clear
+- Category page works visually
+- Product group page works visually
+- Product detail page works visually
+- Technical specifications are easy to read
+- Technical drawings are presented properly
+- Breadcrumbs work
+- Header Products menu connects correctly
+- Desktop/tablet/mobile layouts are handled
+- The design clearly belongs to the CURRENT NEW WEBSITE
+- No old-website visual styling has been copied
+- No backend has been introduced
+
+FIRST TASK:
+
+Before implementing all products, create the UI prototype for:
+
+1. DIN Metric Fittings category page
+2. One representative product group page
+3. One representative individual product detail page
+
+Then stop for UI review/approval before expanding the catalogue.

@@ -1,0 +1,363 @@
+IMPLEMENTATION PLAN — PRODUCT CATALOGUE
+
+Goal:
+Build the complete Product Catalogue UI as a static, SEO-friendly Astro implementation.
+
+IMPORTANT ARCHITECTURE RULES:
+
+1. No backend.
+2. No database.
+3. No authentication.
+4. No admin dashboard.
+5. Product information must be data-driven.
+6. JSON will be the source of truth for product catalogue information.
+7. Do NOT manually create individual product pages one by one.
+8. Build reusable Astro templates that generate product pages from JSON data.
+9. The current approved website UI/design system must remain the visual source of truth.
+10. Do not redesign the existing approved UI while implementing the product section.
+
+TECH STACK:
+
+- Astro
+- TypeScript
+- Tailwind CSS
+- React only where interactivity is actually required
+- Static generation
+- JSON product data
+- Semantic HTML
+- Astro SEO capabilities
+- Astro Image/image optimization where appropriate
+
+PRODUCT HIERARCHY:
+
+Level 1:
+Product Family / Category
+
+Examples:
+- DIN Metric Fittings
+- JIC Tube Fittings
+- Conversion Fittings
+- O Ring Face Seal (ORFS) Fittings
+
+Level 2:
+Series / Product Group
+
+Example:
+DIN Metric Fittings
+→ Straight Series
+→ Equal Straight Couplings
+
+Level 3:
+Individual Product
+
+Example:
+DIN Metric Fittings
+→ Straight Series
+→ Equal Straight Couplings
+→ G-L Straight Coupling
+
+PRODUCT PAGE FLOW:
+
+Header
+↓
+Products dropdown
+↓
+Product Family
+↓
+Series / Product Group
+↓
+Individual Product
+↓
+Technical specifications
+↓
+Request Quote / Brochure
+
+ROUTING:
+
+Use clean SEO-friendly routes.
+
+Example:
+
+/products/din-metric-fittings/
+/products/din-metric-fittings/equal-straight-couplings/
+/products/din-metric-fittings/equal-straight-couplings/g-l-straight-coupling/
+
+Do not use .php URLs.
+
+DATA ARCHITECTURE:
+
+Create structured product data under src/data/products/.
+
+Product data should contain, where applicable:
+
+- slug
+- name
+- category
+- series
+- product group
+- description
+- product image
+- body technical drawing
+- assembly technical drawing
+- specifications
+- dimensional data
+- brochure
+- related products
+- SEO title
+- SEO description
+
+Create TypeScript types/interfaces for the product data.
+
+Validate the data structure so missing or incorrectly typed fields can be caught during development.
+
+PAGE TEMPLATES:
+
+Create reusable templates for:
+
+1. Category Hub
+2. Product Group Listing
+3. Individual Product Detail
+
+Do not duplicate page markup for every product.
+
+Use Astro's static generation/dynamic routes to generate all product pages from the product dataset at build time.
+
+CATEGORY HUB:
+
+Desktop:
+- Existing approved header
+- Breadcrumb
+- Left product/series navigation
+- Right product group grid
+
+Mobile:
+- Do not squeeze the desktop sidebar.
+- Convert the series navigation into the approved mobile-friendly accordion/dropdown pattern.
+
+PRODUCT GROUP PAGE:
+
+- Breadcrumb
+- Product/series navigation
+- Product group heading
+- Product cards
+- Product image
+- Product name
+- View Products action
+
+INDIVIDUAL PRODUCT PAGE:
+
+Follow the approved industrial UI.
+
+Top:
+- Breadcrumb
+- Product title
+- Short product introduction
+
+Main section:
+
+LEFT:
+- Technical drawing
+- Product/body view
+- Assembly view
+- Interactive toggle
+- Zoom/lightbox
+
+RIGHT:
+- Product information
+- Key specifications
+- Request Quote CTA
+- Download Brochure CTA
+
+Bottom:
+- Full technical dimensional table
+- Responsive horizontal scrolling on mobile
+- Related products where appropriate
+
+INTERACTIVITY:
+
+Keep React usage minimal.
+
+Use React Islands only for genuinely interactive components such as:
+
+- Technical drawing toggle
+- Image zoom/lightbox
+- Mobile navigation/accordion where necessary
+- Product filters/search if required later
+
+Everything else should remain Astro/HTML.
+
+HEADER INTEGRATION:
+
+Do not create a separate product navigation system.
+
+Integrate the product catalogue into the existing approved Header.
+
+The PRODUCTS navigation should expose the four product families:
+
+- DIN Metric Fittings
+- JIC Tube Fittings
+- Conversion Fittings
+- O Ring Face Seal (ORFS) Fittings
+
+The header, mobile menu, breadcrumbs and product navigation must all connect to the same URL structure.
+
+SEO:
+
+Every generated product page must have:
+
+- Unique title
+- Unique meta description
+- Canonical URL
+- Proper H1
+- Semantic heading hierarchy
+- Open Graph metadata
+- Product/category breadcrumbs
+- Breadcrumb structured data
+- Relevant Product/Organization structured data where appropriate
+- XML sitemap
+- robots.txt
+- Clean internal linking
+- Descriptive image alt text
+
+Important:
+Do not generate duplicate SEO metadata across products.
+
+IMAGES:
+
+Keep product images and technical drawings organized separately from data.
+
+Example:
+
+public/images/products/
+public/images/products/technical/
+public/brochures/
+
+Use optimized modern image formats where possible.
+
+Do not put large binary image data inside JSON.
+
+JSON should contain image paths/references only.
+
+COMPONENTS:
+
+Create reusable components such as:
+
+ProductBreadcrumb
+ProductSidebar
+ProductCard
+ProductGroupCard
+TechnicalViewer
+SpecificationTable
+ProductCTA
+RelatedProducts
+ProductGrid
+
+Components must receive data through props rather than containing hardcoded product information.
+
+DESIGN RULE:
+
+The currently approved website design is FINAL.
+
+Do not introduce:
+- Glassmorphism
+- Excessive rounded cards
+- Soft SaaS-style UI
+- Unnecessary gradients
+- Random animations
+- New visual language
+
+Maintain:
+- Existing industrial visual language
+- Rigid grids
+- Strong typography
+- Existing brand colors
+- Existing spacing system
+- Existing header/footer
+- Existing responsive behavior
+- Existing visual hierarchy
+
+PHASE 1:
+
+Only build the UI prototype.
+
+Use representative/static product data first.
+
+The objective is to finalize:
+
+- Category page
+- Product group page
+- Product detail page
+- Technical viewer
+- Specification table
+- Desktop layout
+- Mobile layout
+- Header/product navigation
+- Breadcrumbs
+- CTA placement
+
+Do NOT populate the entire catalogue yet.
+
+First make one complete product flow work correctly:
+
+DIN Metric Fittings
+→ Straight Series
+→ Equal Straight Couplings
+→ G-L Straight Coupling
+
+After the UI is approved, scale the same architecture to the complete catalogue.
+
+PHASE 2:
+
+Populate the complete JSON catalogue.
+
+Add:
+
+- All product families
+- All series
+- All product groups
+- All individual products
+- Product specifications
+- Dimension tables
+- Technical drawings
+- Product images
+- Brochures
+- SEO metadata
+
+The same templates must automatically generate the complete catalogue.
+
+PHASE 3:
+
+SEO + QUALITY CHECK
+
+Verify:
+
+- Every product has a unique URL
+- Every product has unique metadata
+- No broken images
+- No broken internal links
+- Breadcrumbs are correct
+- Sitemap contains generated pages
+- Mobile layout works
+- Tables are usable on mobile
+- Technical viewer works
+- Brochure links work
+- Quote CTA works
+- No unnecessary JavaScript
+- No layout-breaking content
+- Build completes without errors
+
+FINAL ARCHITECTURE:
+
+JSON DATA
+      ↓
+TypeScript data model
+      ↓
+Astro dynamic/static routes
+      ↓
+Reusable product templates
+      ↓
+Static HTML pages
+      ↓
+SEO-friendly product catalogue
+
+There must be NO database dependency for the product catalogue.

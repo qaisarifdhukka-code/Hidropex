@@ -1,0 +1,39 @@
+---
+import MobileMenu from './MobileMenu.tsx';
+
+const currentPath = Astro.url.pathname;
+const isProducts = currentPath.startsWith('/products');
+---
+<header class="header">
+  <div class="container flex items-center justify-between" style="height: 5rem;">
+    <a href="/" class="logo text-primary flex items-center" style="font-weight: 900; font-size: 1.5rem; letter-spacing: -0.05em; gap: 0.5rem;">
+      <img src="/logo-hidropex.png" alt="HIDROPEX" style="height: 32px; object-fit: contain;">
+    </a>
+    <nav class="nav-links flex items-center">
+      <div class="dropdown">
+        <a href="/products" class={`flex items-center gap-1 ${isProducts ? 'active' : ''}`}>
+          PRODUCTS
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <div class="dropdown-menu">
+          <a href="/products/din-metric-fittings">DIN Metric Fittings</a>
+          <a href="#">JIC Tube Fittings</a>
+          <a href="#">ORFS Fittings</a>
+          <a href="#">Conversion Fittings</a>
+        </div>
+      </div>
+      <a href="/#capabilities">CAPABILITIES</a>
+      <a href="/#industries">INDUSTRIES</a>
+      <a href="/#company">COMPANY</a>
+      <a href="/#resources">RESOURCES</a>
+    </nav>
+    <a href="#conversion" class="btn btn-primary" style="display: inline-flex;">
+      REQUEST QUOTE
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.25rem; height: 1.25rem;">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+    <MobileMenu client:idle />
+  </div>
+</header>

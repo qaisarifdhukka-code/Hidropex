@@ -1,0 +1,94 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import TopBar from '../../../../../components/TopBar.astro';
+import Header from '../../../../../components/Header.astro';
+import Footer from '../../../../../components/Footer.astro';
+import ProductBreadcrumb from '../../../../../components/products/ProductBreadcrumb.astro';
+import ProductSidebar from '../../../../../components/products/ProductSidebar.astro';
+import ProductGroupCard from '../../../../../components/products/ProductGroupCard.astro';
+import { getAllProductFamilies } from '../../../../../utils/productData';
+import type { ProductFamily } from '../../../../../types/product';
+
+export async function getStaticPaths() {
+  const families = getAllProductFamilies();
+  const paths: any[] = [];
+  
+  families.forEach((family) => {
+    family.seriesList.forEach((series) => {
+      const seriesSlug = series.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+      const groupsInSeries = family.groups.filter(g => g.series === series);
+      
+      groupsInSeries.forEach((group) => {
+        paths.push({
+          params: { family: family.slug, series: seriesSlug, group: group.slug },
+          props: { family, seriesName: series, group },
+        });
+      });
+    });
+  });
+  
+  return paths;
+}
+
+const { family, seriesName, group } = Astro.props;
+---
+
+<Layout title={`${group.name} | ${family.name} | HIDROPEX`}>
+  <TopBar />
+  <Header />
+
+  <main class="section section-bg-gray" style="min-height: 80vh; padding-top: 4rem;">
+    <div class="container">
+      
+      <ProductBreadcrumb paths={[
+        { name: family.name, url: `/products/${family.slug}` },
+        { name: seriesName, url: `/products/${family.slug}/${Astro.params.series}` },
+        { name: group.name }
+      ]} />
+
+      <div style="margin-bottom: 3rem;">
+        <h1 class="text-3xl text-primary" style="margin-bottom: 1rem; font-weight: 300;">{group.name.toUpperCase()}</h1>
+        <p class="text-sm text-muted" style="max-width: 800px;">Select a specific product from the {group.name} range.</p>
+      </div>
+
+      <div class="flex flex-col md-flex-row gap-4" style="align-items: flex-start;">
+        <ProductSidebar 
+          familySlug={family.slug} 
+          seriesList={family.seriesList} 
+          activeSeries={seriesName} 
+        />
+        
+        <div class="flex-grow">
+          {group.products && group.products.length > 0 ? (
+            <div class="grid grid-3 grid-2-mobile gap-4">
+              {group.products.map((product: any) => (
+                <ProductGroupCard 
+                  name={product.name}
+                  url={`/products/${family.slug}/${Astro.params.series}/${group.slug}/${product.slug}`}
+                  imageUrl={product.productImageUrl}
+                  actionText="VIEW DETAILS ↗"
+                  specs={product.specs}
+                />
+              ))}
+            </div>
+          ) : (
+            <div style="padding: 3rem; text-align: center; background: white; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm);">
+              <p class="text-muted">No individual products found for this group yet.</p>
+            </div>
+          )}
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .flex-grow { flex-grow: 1; width: 100%; }
+  
+  @media (min-width: 768px) {
+    .md-flex-row { flex-direction: row; }
+  }
+</style>

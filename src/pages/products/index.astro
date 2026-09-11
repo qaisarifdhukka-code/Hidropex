@@ -1,0 +1,213 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TopBar from '../../components/TopBar.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ProductBreadcrumb from '../../components/products/ProductBreadcrumb.astro';
+import { getAllProductFamilies } from '../../utils/productData';
+
+const families = getAllProductFamilies();
+
+const allFamilies = [
+  {
+    slug: 'din-metric-fittings',
+    name: 'DIN Metric Fittings',
+    description: 'DIN 2353 compression fittings for high-pressure hydraulic and instrumentation tubing. L and S series available.',
+    seriesCount: families[0]?.seriesList?.length ?? 0,
+    imageUrl: '/page_683815386335682.jpg',
+    active: true,
+  },
+  {
+    slug: 'jic-tube-fittings',
+    name: 'JIC Tube Fittings',
+    description: 'SAE/JIC 37° flared fittings for hydraulic systems requiring robust, leak-free connections in high-vibration environments.',
+    seriesCount: null,
+    imageUrl: '/page_683815386335682.jpg',
+    active: false,
+  },
+  {
+    slug: 'orfs-fittings',
+    name: 'ORFS Fittings',
+    description: 'O-Ring Face Seal fittings for zero-leak requirements in high-pressure hydraulic systems and critical applications.',
+    seriesCount: null,
+    imageUrl: '/page_683815386335682.jpg',
+    active: false,
+  },
+  {
+    slug: 'conversion-fittings',
+    name: 'Conversion Fittings',
+    description: 'Adaptors and conversion fittings to bridge DIN, JIC, BSP, and NPT thread systems across mixed hydraulic installations.',
+    seriesCount: null,
+    imageUrl: '/page_683815386335682.jpg',
+    active: false,
+  },
+];
+---
+
+<Layout title="Product Catalogue | HIDROPEX">
+  <TopBar />
+  <Header />
+
+  <main style="min-height: 80vh; background-color: var(--color-bg-gray);">
+
+    <div style="background-color: var(--color-bg-white); border-bottom: 1px solid var(--color-border-color); padding: 2rem 0;">
+      <div class="container">
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1rem;">
+          <ol style="display: flex; align-items: center; gap: 0.5rem; list-style: none; padding: 0; margin: 0;">
+            <li><a href="/" class="text-xs text-muted" style="text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color=''">HOME</a></li>
+            <li><span class="text-xs text-muted" style="margin: 0 0.25rem;">/</span></li>
+            <li><span class="text-xs text-primary" style="font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">PRODUCTS</span></li>
+          </ol>
+        </nav>
+        <h1 class="text-2xl text-primary" style="font-weight: 400; margin-bottom: 0.5rem;">PRODUCT CATALOGUE</h1>
+        <p class="text-sm text-muted" style="max-width: 640px; margin: 0;">
+          Precision-engineered hydraulic fittings conforming to DIN, JIC, ORFS, and BSP standards. Select a product family to begin.
+        </p>
+      </div>
+    </div>
+
+    <div class="container" style="padding-top: 3rem; padding-bottom: 4rem;">
+
+      <!-- PRODUCT FAMILY GRID -->
+      <p class="text-xs text-muted" style="margin-bottom: 1.25rem;">SELECT PRODUCT FAMILY</p>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 4rem;">
+        {allFamilies.map((family) => (
+          family.active ? (
+            <a
+              href={`/products/${family.slug}`}
+              class="pf-card-active"
+              style="text-decoration: none; display: flex; flex-direction: column; background: white; border: 1px solid var(--color-border-color); overflow: hidden;"
+            >
+              <div style="aspect-ratio: 4/3; overflow: hidden; background: var(--color-bg-gray); border-bottom: 1px solid var(--color-border-color);">
+                <img src={family.imageUrl} alt={family.name} style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.2s;" />
+              </div>
+              <div style="padding: 1.25rem; flex-grow: 1;">
+                <h3 style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 0.5rem;">{family.name}</h3>
+                <p style="font-size: 0.78rem; color: var(--color-gray-dark); line-height: 1.55; margin: 0;">{family.description}</p>
+                {family.seriesCount > 0 && (
+                  <span style="display: inline-block; margin-top: 0.75rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: white; background: var(--color-primary); padding: 0.2rem 0.5rem;">
+                    {family.seriesCount} SERIES AVAILABLE
+                  </span>
+                )}
+              </div>
+              <div style="padding: 0.75rem 1.25rem; border-top: 1px solid var(--color-border-color); background: var(--color-bg-gray);">
+                <span style="font-size: 0.7rem; font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase;">EXPLORE PRODUCTS ↗</span>
+              </div>
+            </a>
+          ) : (
+            <div
+              style="display: flex; flex-direction: column; background: white; border: 1px solid var(--color-border-color); overflow: hidden; opacity: 0.7;"
+            >
+              <div style="aspect-ratio: 4/3; overflow: hidden; background: var(--color-bg-gray); border-bottom: 1px solid var(--color-border-color); filter: grayscale(70%);">
+                <img src={family.imageUrl} alt={family.name} style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div style="padding: 1.25rem; flex-grow: 1;">
+                <h3 style="font-size: 0.85rem; font-weight: 700; color: var(--color-gray-dark); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 0.5rem;">{family.name}</h3>
+                <p style="font-size: 0.78rem; color: var(--color-gray-dark); line-height: 1.55; margin: 0;">{family.description}</p>
+              </div>
+              <div style="padding: 0.75rem 1.25rem; border-top: 1px solid var(--color-border-color); background: var(--color-bg-gray);">
+                <span style="font-size: 0.65rem; font-weight: 700; color: var(--color-gray-dark); letter-spacing: 0.1em; text-transform: uppercase;">COMING SOON</span>
+              </div>
+            </div>
+          )
+        ))}
+      </div>
+
+      <!-- PRODUCT SEARCH SECTION -->
+      <div style="background: white; border: 1px solid var(--color-border-color); border-top: 3px solid var(--color-primary); padding: 2rem;">
+        <p class="text-xs text-muted" style="margin-bottom: 0.5rem;">PRODUCT SEARCH</p>
+        <h2 class="text-xl text-primary" style="font-weight: 400; margin-bottom: 0.5rem;">FIND A SPECIFIC PRODUCT</h2>
+        <p class="text-sm text-muted" style="margin-bottom: 1.5rem;">Search by product name, part number, series, or product group.</p>
+
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+          <div style="position: relative; flex-grow: 1;">
+            <svg style="position: absolute; left: 0.875rem; top: 50%; transform: translateY(-50%); width: 1rem; height: 1rem; color: var(--color-gray-dark); pointer-events: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              id="product-search"
+              type="text"
+              placeholder="Search products, part numbers or series..."
+              style="width: 100%; padding: 0.875rem 1rem 0.875rem 2.5rem; border: 1px solid var(--color-border-color); font-family: var(--font-sans); font-size: 0.875rem; color: var(--color-navy); background-color: var(--color-bg-gray); outline: none; box-sizing: border-box;"
+              autocomplete="off"
+            />
+          </div>
+          <button class="btn btn-primary" style="white-space: nowrap; flex-shrink: 0;">SEARCH CATALOGUE</button>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+          <span class="text-xs text-muted" style="margin-right: 0.25rem;">Try:</span>
+          <button class="search-tag" onclick="document.getElementById('product-search').value='G-L Straight Coupling'">G-L Straight Coupling</button>
+          <button class="search-tag" onclick="document.getElementById('product-search').value='G-06-L'">G-06-L</button>
+          <button class="search-tag" onclick="document.getElementById('product-search').value='L-series'">L-series</button>
+          <button class="search-tag" onclick="document.getElementById('product-search').value='Equal Straight Couplings'">Equal Straight Couplings</button>
+        </div>
+
+        <p style="font-size: 0.75rem; color: var(--color-gray-dark); font-style: italic; margin: 0;">
+          ℹ Full search functionality will be enabled when the complete product catalogue is populated.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Active card hover effects */
+  .pf-card-active {
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  }
+  .pf-card-active:hover {
+    border-color: var(--color-primary) !important;
+    box-shadow: var(--shadow-rigid);
+    transform: translateY(-2px);
+  }
+  .pf-card-active:hover img {
+    transform: scale(1.04);
+  }
+
+  /* Search tag buttons */
+  .search-tag {
+    background: transparent;
+    border: 1px solid var(--color-border-color);
+    padding: 0.25rem 0.65rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    color: var(--color-navy);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+  }
+  .search-tag:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background-color: var(--color-bg-gray);
+  }
+
+  /* Focus state for input */
+  #product-search:focus {
+    border-color: var(--color-primary) !important;
+    background-color: white !important;
+  }
+
+  /* Responsive grid */
+  @media (max-width: 900px) {
+    div[style*="grid-template-columns: repeat(4, 1fr)"] {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media (max-width: 560px) {
+    div[style*="grid-template-columns: repeat(4, 1fr)"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="display: flex; gap: 1rem; margin-bottom: 1rem;"] {
+      flex-direction: column;
+    }
+  }
+</style>
