@@ -4,7 +4,7 @@ import TopBar from '../../../../components/TopBar.astro';
 import Header from '../../../../components/Header.astro';
 import Footer from '../../../../components/Footer.astro';
 import ProductBreadcrumb from '../../../../components/products/ProductBreadcrumb.astro';
-import ProductSidebar from '../../../../components/products/ProductSidebar.astro';
+import ProductPageLayout from '../../../../components/products/ProductPageLayout.astro';
 import ProductGroupCard from '../../../../components/products/ProductGroupCard.astro';
 import { getAllProductFamilies } from '../../../../utils/productData';
 import type { ProductFamily } from '../../../../types/product';
@@ -45,38 +45,40 @@ const activeGroups = family.groups.filter(g => g.series === seriesName);
       ]} />
 
       <div style="margin-bottom: 3rem;">
-        <h1 class="text-3xl text-primary" style="margin-bottom: 1rem; font-weight: 300;">{family.name.toUpperCase()} - {seriesName.toUpperCase()}</h1>
+        <h1 class="text-3xl" style="color: var(--color-navy-dark); margin-bottom: 1rem; font-weight: 700;">{family.name.toUpperCase()} - {seriesName.toUpperCase()}</h1>
         <p class="text-sm text-muted" style="max-width: 800px;">Browse our range of product groups within the {seriesName} category.</p>
       </div>
 
-      <div class="product-layout-wrapper">
-        <div class="sidebar-wrapper">
-          <ProductSidebar 
-            familySlug={family.slug} 
-            seriesList={family.seriesList} 
-            activeSeries={seriesName} 
-          />
-        </div>
-        
-        <div class="content-wrapper">
-          {activeGroups.length > 0 ? (
-            <div class="grid grid-3 grid-2-mobile gap-4">
-              {activeGroups.map((group) => (
+      <ProductPageLayout
+        familySlug={family.slug}
+        seriesList={family.seriesList}
+        activeSeries={seriesName}
+      >
+        {activeGroups.length > 0 ? (
+          <div class="grid grid-4 grid-2-mobile gap-4">
+            {activeGroups.map((group) => {
+              const hasSingleProduct = group.products && group.products.length === 1;
+              const url = `/products/${family.slug}/${Astro.params.series}/${group.slug}`;
+              const actionText = hasSingleProduct ? "VIEW DETAILS ↗" : "VIEW PRODUCTS ↗";
+              
+              return (
                 <ProductGroupCard 
                   name={group.name}
-                  url={`/products/${family.slug}/${Astro.params.series}/${group.slug}`}
+                  url={url}
                   imageUrl={group.groupImageUrl}
-                  actionText="VIEW PRODUCTS ↗"
+                  actionText={actionText}
+                  description={group.description}
+                  specs={group.products && group.products.length > 0 ? group.products[0].specs : undefined}
                 />
-              ))}
-            </div>
-          ) : (
-            <div style="padding: 3rem; text-align: center; background: white; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm);">
-              <p class="text-muted">No product groups found for this series yet.</p>
-            </div>
-          )}
-        </div>
-      </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div style="padding: 3rem; text-align: center; background: white; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm);">
+            <p class="text-muted">No product groups found for this series yet.</p>
+          </div>
+        )}
+      </ProductPageLayout>
 
     </div>
   </main>

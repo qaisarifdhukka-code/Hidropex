@@ -4,8 +4,10 @@ import TopBar from '../../../../../components/TopBar.astro';
 import Header from '../../../../../components/Header.astro';
 import Footer from '../../../../../components/Footer.astro';
 import ProductBreadcrumb from '../../../../../components/products/ProductBreadcrumb.astro';
-import ProductSidebar from '../../../../../components/products/ProductSidebar.astro';
+import ProductPageLayout from '../../../../../components/products/ProductPageLayout.astro';
 import ProductGroupCard from '../../../../../components/products/ProductGroupCard.astro';
+import TechnicalViewer from '../../../../../components/products/TechnicalViewer.tsx';
+import SpecificationTable from '../../../../../components/products/SpecificationTable.astro';
 import { getAllProductFamilies } from '../../../../../utils/productData';
 import type { ProductFamily } from '../../../../../types/product';
 
@@ -31,6 +33,10 @@ export async function getStaticPaths() {
 }
 
 const { family, seriesName, group } = Astro.props;
+
+// If exactly one product, we will display it directly on this page instead of a redundant grid
+const isSingleProduct = group.products && group.products.length === 1;
+const product = isSingleProduct ? group.products[0] : null;
 ---
 
 <Layout title={`${group.name} | ${family.name} | HIDROPEX`}>
@@ -47,37 +53,91 @@ const { family, seriesName, group } = Astro.props;
       ]} />
 
       <div style="margin-bottom: 3rem;">
-        <h1 class="text-3xl text-primary" style="margin-bottom: 1rem; font-weight: 300;">{group.name.toUpperCase()}</h1>
-        <p class="text-sm text-muted" style="max-width: 800px;">Select a specific product from the {group.name} range.</p>
+        <h1 class="text-3xl" style="color: var(--color-navy-dark); margin-bottom: 1rem; font-weight: 700;">{group.name.toUpperCase()}</h1>
+        {isSingleProduct && product ? (
+          <p class="text-sm text-muted" style="max-width: 800px;">{product.description}</p>
+        ) : (
+          <p class="text-sm text-muted" style="max-width: 800px;">Select a specific product from the {group.name} range.</p>
+        )}
       </div>
 
-      <div class="flex flex-col md-flex-row gap-4" style="align-items: flex-start;">
-        <ProductSidebar 
-          familySlug={family.slug} 
-          seriesList={family.seriesList} 
-          activeSeries={seriesName} 
-        />
-        
-        <div class="flex-grow">
-          {group.products && group.products.length > 0 ? (
-            <div class="grid grid-3 grid-2-mobile gap-4">
-              {group.products.map((product: any) => (
-                <ProductGroupCard 
-                  name={product.name}
-                  url={`/products/${family.slug}/${Astro.params.series}/${group.slug}/${product.slug}`}
-                  imageUrl={product.productImageUrl}
-                  actionText="VIEW DETAILS ↗"
-                  specs={product.specs}
+      <ProductPageLayout
+        familySlug={family.slug}
+        seriesList={family.seriesList}
+        activeSeries={seriesName}
+      >
+        {isSingleProduct && product ? (
+          <>
+            <!-- Main Product Display Split -->
+            <div class="grid grid-2 gap-4" style="margin-bottom: 4rem; align-items: stretch;">
+              
+              <!-- Left: Technical Viewer -->
+              <div style="background: white; border: 1px solid var(--color-border-color); padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
+                <TechnicalViewer 
+                  client:idle
+                  productName={product.name}
+                  bodyUrl={product.bodyDrawingUrl}
+                  assemblyUrl={product.assemblyDrawingUrl}
+                  fallbackImageUrl={product.productImageUrl}
                 />
-              ))}
+              </div>
+
+              <!-- Right: Specifications and CTAs -->
+              <div class="flex flex-col gap-4">
+                <div style="background: white; border: 1px solid var(--color-border-color); padding: 0; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-card);">
+                  <h3 class="text-xs text-muted" style="margin: 0; padding: 1.5rem; border-bottom: 1px solid var(--color-border-color);">KEY SPECIFICATIONS</h3>
+                  
+                  <div class="flex flex-col">
+                    <div class="flex justify-between" style="padding: 1rem 1.5rem; background-color: var(--color-bg-gray); border-bottom: 1px solid var(--color-border-color);">
+                      <span class="text-sm font-bold text-primary">Category</span>
+                      <span class="text-sm text-muted">{product.specs?.category || '-'}</span>
+                    </div>
+                    <div class="flex justify-between" style="padding: 1rem 1.5rem; background-color: white; border-bottom: 1px solid var(--color-border-color);">
+                      <span class="text-sm font-bold text-primary">Tube O.D. Range</span>
+                      <span class="text-sm text-muted">{product.specs?.tubeODRange || '-'}</span>
+                    </div>
+                    <div class="flex justify-between" style="padding: 1rem 1.5rem; background-color: var(--color-bg-gray);">
+                      <span class="text-sm font-bold text-primary">Part Type</span>
+                      <span class="text-sm text-muted">{product.specs?.partType || '-'}</span>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-2 mobile-sticky-cta" style="padding: 1.5rem; border-top: 1px solid var(--color-border-color); background: white;">
+                    <a href="#quote" class="btn btn-primary text-center" style="display: flex; justify-content: center; flex: 1;">REQUEST A QUOTE ↗</a>
+                    {product.brochureUrl && (
+                      <a href={product.brochureUrl} class="btn btn-outline text-center" style="display: flex; justify-content: center; flex: 1;">DOWNLOAD BROCHURE ↓</a>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
-          ) : (
-            <div style="padding: 3rem; text-align: center; background: white; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm);">
-              <p class="text-muted">No individual products found for this group yet.</p>
-            </div>
-          )}
+          </>
+        ) : group.products && group.products.length > 0 ? (
+          <div class="grid grid-4 grid-2-mobile gap-4">
+            {group.products.map((p: any) => (
+              <ProductGroupCard 
+                name={p.name}
+                url={`/products/${family.slug}/${Astro.params.series}/${group.slug}/${p.slug}`}
+                imageUrl={p.productImageUrl}
+                actionText="VIEW DETAILS ↗"
+                specs={p.specs}
+              />
+            ))}
+          </div>
+        ) : (
+          <div style="padding: 3rem; text-align: center; background: white; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm);">
+            <p class="text-muted">No individual products found for this group yet.</p>
+          </div>
+        )}
+      </ProductPageLayout>
+
+      <!-- Bottom: Dimensional Table -->
+      {isSingleProduct && product && product.dimensionalData && product.dimensionalData.length > 0 && (
+        <div style="margin-top: 4rem;">
+          <h3 class="text-xl text-primary" style="margin-bottom: 1rem; font-weight: 600;">DIMENSIONAL DATA</h3>
+          <SpecificationTable data={product.dimensionalData} />
         </div>
-      </div>
+      )}
 
     </div>
   </main>
@@ -88,7 +148,32 @@ const { family, seriesName, group } = Astro.props;
 <style>
   .flex-grow { flex-grow: 1; width: 100%; }
   
+  @media (max-width: 768px) {
+    .grid-2 {
+      grid-template-columns: 1fr !important;
+    }
+    .mobile-sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+      padding: 1rem !important;
+      flex-direction: row !important;
+      gap: 0.5rem !important;
+    }
+    .mobile-sticky-cta .btn {
+      padding: 0.75rem 0.5rem !important;
+      font-size: 0.7rem !important;
+    }
+    /* Add padding to bottom of page to account for sticky footer */
+    main {
+      padding-bottom: 5rem !important;
+    }
+  }
+
   @media (min-width: 768px) {
-    .md-flex-row { flex-direction: row; }
+    .md-flex-row { flex-direction: row !important; }
   }
 </style>

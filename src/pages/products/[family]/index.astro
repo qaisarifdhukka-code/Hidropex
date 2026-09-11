@@ -4,7 +4,7 @@ import TopBar from '../../../components/TopBar.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import ProductBreadcrumb from '../../../components/products/ProductBreadcrumb.astro';
-import ProductSidebar from '../../../components/products/ProductSidebar.astro';
+import ProductPageLayout from '../../../components/products/ProductPageLayout.astro';
 import ProductGroupCard from '../../../components/products/ProductGroupCard.astro';
 import { getAllProductFamilies } from '../../../utils/productData';
 import type { ProductFamily } from '../../../types/product';
@@ -19,9 +19,9 @@ export async function getStaticPaths() {
 
 const { family } = Astro.props as { family: ProductFamily };
 
-// The default series to show is the first one in the list.
-const defaultSeries = family.seriesList[0];
-const defaultGroups = family.groups.filter(g => g.series === defaultSeries);
+// The default series to show is 'ALL PRODUCTS'.
+const defaultSeries = 'ALL PRODUCTS';
+const defaultGroups = family.groups;
 ---
 
 <Layout title={`${family.name} | HIDROPEX`}>
@@ -36,37 +36,35 @@ const defaultGroups = family.groups.filter(g => g.series === defaultSeries);
       ]} />
 
       <div style="margin-bottom: 3rem;">
-        <h1 class="text-3xl text-primary" style="margin-bottom: 1rem; font-weight: 300;">{family.name.toUpperCase()}</h1>
+        <h1 class="text-3xl" style="color: var(--color-navy-dark); margin-bottom: 1rem; font-weight: 700;">{family.name.toUpperCase()}</h1>
         <p class="text-sm text-muted" style="max-width: 800px;">{family.description}</p>
       </div>
 
-      <div class="product-layout-wrapper">
-        <!-- Sidebar with right divider -->
-        <div class="sidebar-wrapper">
-          <ProductSidebar 
-            familySlug={family.slug} 
-            seriesList={family.seriesList} 
-            activeSeries={defaultSeries} 
-          />
+      <ProductPageLayout
+        familySlug={family.slug}
+        seriesList={family.seriesList}
+        activeSeries={defaultSeries}
+      >
+        <div class="grid grid-4 grid-2-mobile gap-4">
+          {defaultGroups.map((group) => {
+            const seriesSlug = group.series.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+            const hasSingleProduct = group.products && group.products.length === 1;
+            const url = `/products/${family.slug}/${seriesSlug}/${group.slug}`;
+            const actionText = hasSingleProduct ? "VIEW DETAILS ↗" : "VIEW PRODUCTS ↗";
+            
+            return (
+              <ProductGroupCard 
+                name={group.name}
+                url={url}
+                imageUrl={group.groupImageUrl}
+                actionText={actionText}
+                description={group.description}
+                specs={group.products && group.products.length > 0 ? group.products[0].specs : undefined}
+              />
+            );
+          })}
         </div>
-        
-        <!-- Product content -->
-        <div class="content-wrapper">
-          <div class="grid grid-3 grid-2-mobile gap-4">
-            {defaultGroups.map((group) => {
-              const seriesSlug = group.series.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-              return (
-                <ProductGroupCard 
-                  name={group.name}
-                  url={`/products/${family.slug}/${seriesSlug}/${group.slug}`}
-                  imageUrl={group.groupImageUrl}
-                  actionText="VIEW PRODUCTS ↗"
-                />
-              );
-            })}
-          </div>
-        </div>
-      </div>
+      </ProductPageLayout>
 
     </div>
   </main>

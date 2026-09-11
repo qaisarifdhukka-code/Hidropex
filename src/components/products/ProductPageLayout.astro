@@ -1,0 +1,31 @@
+---
+import ProductSidebar from './ProductSidebar.astro';
+
+interface Props {
+  familySlug: string;
+  seriesList: string[];
+  activeSeries?: string;
+}
+
+const { familySlug, seriesList, activeSeries = '' } = Astro.props;
+---
+
+<div class="flex flex-col md-flex-row gap-4" style="align-items: flex-start;">
+  <ProductSidebar 
+    familySlug={familySlug} 
+    seriesList={seriesList} 
+    activeSeries={activeSeries} 
+  />
+  
+  <div class="flex-grow" style="width: 100%;">
+    <slot />
+  </div>
+</div>
+
+<style is:global>
+  .flex-grow { flex-grow: 1; width: 100%; }
+  
+  @media (min-width: 768px) {
+    .md-flex-row { flex-direction: row !important; }
+  }
+</style>
