@@ -54,7 +54,7 @@ export default function ProductSlider() {
                             <img src={currentItem.img} alt={currentItem.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                         </div>
                     </div>
-                    <div className="product-slider-info flex flex-col gap-2" style={{ maxWidth: '400px', paddingLeft: '2rem' }}>
+                    <div className="product-slider-info flex flex-col gap-2 pl-desktop-2" style={{ maxWidth: '400px' }}>
                         <span className="text-xs text-muted">PRODUCT FAMILY {currentItem.id}</span>
                         <h3 className="text-2xl text-primary" style={{ marginBottom: '0.5rem' }}>{currentItem.title}</h3>
                         <p className="text-sm" style={{ marginBottom: '1.5rem' }}>{currentItem.desc}</p>

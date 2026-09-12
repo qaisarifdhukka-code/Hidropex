@@ -39,7 +39,7 @@ export default function CapabilitiesTabs() {
                     <div className="img-box" style={{ aspectRatio: '16/9', maxHeight: '380px', borderRadius: 'var(--radius-sm)', padding: 0, overflow: 'hidden' }}>
                         <img src={activeItem.img} alt={activeItem.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
-                    <div className="flex flex-col gap-2" style={{ maxWidth: '500px', paddingLeft: '2rem' }}>
+                    <div className="flex flex-col gap-2 pl-desktop-2" style={{ maxWidth: '500px' }}>
                         <span className="text-xs text-muted">STEP {activeItem.id}</span>
                         <h3 className="text-3xl text-primary" style={{ marginBottom: '0.5rem' }}>{activeItem.title}</h3>
                         <p className="text-base text-muted" style={{ lineHeight: 1.5 }}>{activeItem.desc}</p>

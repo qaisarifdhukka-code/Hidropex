@@ -12,12 +12,12 @@ export default function IndustriesSlider() {
     return (
         <section id="industries" className="section" style={{ overflow: 'hidden' }}>
             <div className="container">
-                <div className="flex justify-between items-start" style={{ marginBottom: '2rem' }}>
+                <div className="flex justify-between items-start flex-col-mobile gap-4" style={{ marginBottom: '2rem' }}>
                     <h2 className="text-xs flex flex-col-mobile gap-2" style={{ alignItems: 'flex-start' }}>
                         <div className="flex items-center gap-2"><span className="text-primary">05</span> DEMANDING APPLICATIONS</div>
                         <span className="text-muted" style={{ fontWeight: 500, fontSize: '0.7rem' }}>INDUSTRIES SERVED</span>
                     </h2>
-                    <a href="#company" className="btn btn-ghost text-xs">VIEW ALL INDUSTRIES ↗</a>
+                    <a href="#company" className="btn btn-ghost text-xs" style={{ whiteSpace: 'nowrap', textAlign: 'right' }}>VIEW ALL INDUSTRIES ↗</a>
                 </div>
 
                 <div className="ind-slider flex gap-4" style={{ overflowX: 'auto', paddingBottom: '1rem', scrollbarWidth: 'none', scrollSnapType: 'x mandatory' }}>

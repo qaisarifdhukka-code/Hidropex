@@ -75,7 +75,6 @@ export default function PlantIndex() {
                                 style={{ 
                                     justifyContent: 'flex-start', 
                                     borderRadius: 0, 
-                                    padding: '1.25rem 1.5rem',
                                     backgroundColor: activeIndex === i ? 'var(--color-primary)' : 'transparent',
                                     color: activeIndex === i ? 'white' : 'var(--color-navy)',
                                     border: `1px solid ${activeIndex === i ? 'var(--color-primary)' : 'var(--color-border-color)'}`,
