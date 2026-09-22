@@ -1,0 +1,42 @@
+{
+  "slug": "jic-tube-fittings",
+  "name": "JIC Tube Fittings",
+  "description": "Standard 37° flare fittings for reliable high-pressure fluid power systems.",
+  "seriesList": [
+    "Male Connector",
+    "Female Connector",
+    "Union Elbow",
+    "Union Tee"
+  ],
+  "groups": [
+    {
+      "series": "Male Connector",
+      "slug": "jic-male-connector",
+      "name": "JIC Male Connector",
+      "description": "High pressure JIC 37 degree flare male connectors.",
+      "products": [
+        {
+          "slug": "jic-male-connector-01",
+          "name": "JIC Male Connector",
+          "description": "JIC 37 degree flare male connector.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "JIC Tube Fittings",
+            "tubeODRange": "1/4\" - 2\"",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/product3.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "JMC-04-04",
+              "tubeOD": "1/4\"",
+              "thread": "7/16-20 UNF",
+              "series": "JIC"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/product3.jpg"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "orfs-fittings",
+  "name": "ORFS Fittings",
+  "description": "O-Ring Face Seal fittings providing leak-free connections for high-vibration applications.",
+  "seriesList": [
+    "ORFS Unions",
+    "ORFS Bulkhead",
+    "ORFS O-Rings"
+  ],
+  "groups": [
+    {
+      "series": "ORFS Unions",
+      "slug": "orfs-straight-union",
+      "name": "ORFS Straight Union",
+      "description": "Leak-free O-ring face seal straight union.",
+      "products": [
+        {
+          "slug": "orfs-straight-union-01",
+          "name": "ORFS Straight Union",
+          "description": "ORFS Straight union for high vibration.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "ORFS Fittings",
+            "tubeODRange": "1/4\" - 1 1/2\"",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/product2.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "ORFS-U-04",
+              "tubeOD": "1/4\"",
+              "thread": "9/16-18 UNF",
+              "series": "ORFS"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/product2.jpg"
+    }
+  ]
+}

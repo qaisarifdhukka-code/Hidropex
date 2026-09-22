@@ -67,25 +67,45 @@ export default function GlobalSearchModal({ products }: { products: ProductFamil
         });
       }
 
-      // Check series
-      family.seriesList?.forEach(series => {
-        const matchSeries = series.series.toLowerCase().includes(lowerQuery);
-        const matchName = series.name?.toLowerCase().includes(lowerQuery);
-        const matchPart = series.partNumber?.toLowerCase().includes(lowerQuery);
-
-        if (matchSeries || matchName || matchPart) {
-          let context = series.series;
-          if (matchName && series.name) context += ` - ${series.name}`;
-          if (matchPart && series.partNumber) context += ` (${series.partNumber})`;
-
+      // Check groups and products
+      family.groups?.forEach(group => {
+        const matchGroup = group.name.toLowerCase().includes(lowerQuery);
+        
+        if (matchGroup) {
           newResults.push({
             type: 'series',
-            name: `${family.name}: ${series.series}`,
-            url: `/products/${family.slug}#${series.series}`,
+            name: `${family.name}: ${group.name}`,
+            url: `/products/${family.slug}#${group.slug}`,
             familySlug: family.slug,
-            matchContext: context
+            matchContext: group.name
           });
         }
+
+        group.products?.forEach(product => {
+          const matchProduct = product.name.toLowerCase().includes(lowerQuery);
+          
+          let matchingPartNo = '';
+          const matchPart = product.dimensionalData?.some(d => {
+            if (d.partNo && d.partNo.toLowerCase().includes(lowerQuery)) {
+              matchingPartNo = d.partNo;
+              return true;
+            }
+            return false;
+          });
+
+          if (!matchGroup && (matchProduct || matchPart)) {
+            let context = product.name;
+            if (matchPart) context += ` (${matchingPartNo})`;
+
+            newResults.push({
+              type: 'series',
+              name: `${family.name}: ${product.name}`,
+              url: `/products/${family.slug}#${group.slug}`,
+              familySlug: family.slug,
+              matchContext: context
+            });
+          }
+        });
       });
     });
 

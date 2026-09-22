@@ -1,0 +1,41 @@
+{
+  "slug": "conversion-adaptors",
+  "name": "Conversion Adaptors",
+  "description": "Versatile adaptors to transition between various thread types.",
+  "seriesList": [
+    "BSP to NPT",
+    "DIN to JIC",
+    "Metric to Imperial"
+  ],
+  "groups": [
+    {
+      "series": "BSP to NPT",
+      "slug": "bsp-npt-adaptor",
+      "name": "BSP to NPT Adaptor",
+      "description": "Conversion adaptor from BSP thread to NPT thread.",
+      "products": [
+        {
+          "slug": "bsp-npt-adaptor-01",
+          "name": "BSP to NPT Adaptor",
+          "description": "Conversion adaptor from BSP to NPT.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "Conversion Adaptors",
+            "tubeODRange": "1/8\" - 2\"",
+            "partType": "Adaptor"
+          },
+          "productImageUrl": "/images/double-ferrule-compression-fittings1.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "ADP-BSP-NPT-04",
+              "thread1": "1/4\" BSP",
+              "thread2": "1/4\" NPT",
+              "series": "CONV"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/double-ferrule-compression-fittings1.jpg"
+    }
+  ]
+}

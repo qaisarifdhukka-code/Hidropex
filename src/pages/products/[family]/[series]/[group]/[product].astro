@@ -1,8 +1,5 @@
 ---
 import Layout from '../../../../../layouts/Layout.astro';
-import TopBar from '../../../../../components/TopBar.astro';
-import Header from '../../../../../components/Header.astro';
-import Footer from '../../../../../components/Footer.astro';
 import ProductBreadcrumb from '../../../../../components/products/ProductBreadcrumb.astro';
 import ProductPageLayout from '../../../../../components/products/ProductPageLayout.astro';
 import TechnicalViewer from '../../../../../components/products/TechnicalViewer.tsx';
@@ -36,10 +33,7 @@ export async function getStaticPaths() {
 const { family, seriesName, group, product } = Astro.props;
 ---
 
-<Layout title={`${product.name} | ${group.name} | HIDROPEX`}>
-  <TopBar />
-  <Header />
-
+<Layout title={`${product.name} | ${family.name} | HIDROPEX`}>
   <main class="section section-bg-gray" style="min-height: 80vh; padding-top: 4rem;">
     <div class="container">
       
@@ -118,8 +112,6 @@ const { family, seriesName, group, product } = Astro.props;
 
     </div>
   </main>
-
-  <Footer />
 </Layout>
 
 <style>

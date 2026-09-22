@@ -1,0 +1,40 @@
+{
+  "slug": "custom-fittings",
+  "name": "Custom Fittings",
+  "description": "Precision-engineered fittings designed to OEM specifications.",
+  "seriesList": [
+    "Custom Machined Parts",
+    "OEM Specific Adaptors"
+  ],
+  "groups": [
+    {
+      "series": "Custom Machined Parts",
+      "slug": "custom-manifold",
+      "name": "Custom Hydraulic Manifold",
+      "description": "Custom designed hydraulic manifolds for OEM applications.",
+      "products": [
+        {
+          "slug": "custom-manifold-01",
+          "name": "Custom Hydraulic Manifold",
+          "description": "Custom designed hydraulic manifold block.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "Custom",
+            "tubeODRange": "Custom",
+            "partType": "Manifold"
+          },
+          "productImageUrl": "/images/product3.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "CUST-MAN-01",
+              "drawingNo": "DWG-12345",
+              "material": "Steel",
+              "series": "OEM"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/product3.jpg"
+    }
+  ]
+}

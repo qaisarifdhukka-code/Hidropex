@@ -29,10 +29,18 @@
 
     <div class="flex flex-col-mobile items-center gap-4" style="margin-top: 2rem; width: 100%; justify-content: center;">
       <span class="text-sm" style="font-weight: 600;">ALREADY KNOW YOUR PRODUCT OR REQUIREMENT?</span>
-      <div style="display: flex; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm); overflow: hidden; width: 100%; max-width: 400px; background: white;">
-        <input type="text" placeholder="Search products..." style="padding: 0.75rem 1rem; border: none; flex: 1; outline: none; font-family: inherit;" />
-        <button style="padding: 0 1rem; background: var(--color-bg-gray); border: none; border-left: 1px solid var(--color-border-color); cursor: pointer; color: var(--color-primary); font-weight: bold;">SEARCH →</button>
-      </div>
+      <form 
+        onsubmit="event.preventDefault(); window.dispatchEvent(new Event('open-search'));"
+        style="display: flex; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm); overflow: hidden; width: 100%; max-width: 400px; background: white;"
+      >
+        <input 
+          type="text" 
+          placeholder="Search products..." 
+          onclick="window.dispatchEvent(new Event('open-search'))"
+          style="padding: 0.75rem 1rem; border: none; flex: 1; outline: none; font-family: inherit; cursor: text;" 
+        />
+        <button type="submit" style="padding: 0 1rem; background: var(--color-bg-gray); border: none; border-left: 1px solid var(--color-border-color); cursor: pointer; color: var(--color-primary); font-weight: bold;">SEARCH →</button>
+      </form>
     </div>
   </div>
 </section>

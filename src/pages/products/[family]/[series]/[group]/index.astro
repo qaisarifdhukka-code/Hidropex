@@ -1,8 +1,5 @@
 ---
 import Layout from '../../../../../layouts/Layout.astro';
-import TopBar from '../../../../../components/TopBar.astro';
-import Header from '../../../../../components/Header.astro';
-import Footer from '../../../../../components/Footer.astro';
 import ProductBreadcrumb from '../../../../../components/products/ProductBreadcrumb.astro';
 import ProductPageLayout from '../../../../../components/products/ProductPageLayout.astro';
 import ProductGroupCard from '../../../../../components/products/ProductGroupCard.astro';
@@ -40,9 +37,6 @@ const product = isSingleProduct ? group.products[0] : null;
 ---
 
 <Layout title={`${group.name} | ${family.name} | HIDROPEX`}>
-  <TopBar />
-  <Header />
-
   <main class="section section-bg-gray" style="min-height: 80vh; padding-top: 4rem;">
     <div class="container">
       
@@ -141,8 +135,6 @@ const product = isSingleProduct ? group.products[0] : null;
 
     </div>
   </main>
-
-  <Footer />
 </Layout>
 
 <style>

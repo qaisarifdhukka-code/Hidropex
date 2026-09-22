@@ -1,0 +1,40 @@
+{
+  "slug": "double-ferrule",
+  "name": "Double Ferrule Fittings",
+  "description": "Double ferrule compression fittings for leak-tight gas and fluid connections.",
+  "seriesList": [
+    "Instrumentation Unions",
+    "Instrumentation Tees",
+    "Instrumentation Valves"
+  ],
+  "groups": [
+    {
+      "series": "Instrumentation Unions",
+      "slug": "double-ferrule-union",
+      "name": "Double Ferrule Union",
+      "description": "High precision double ferrule straight union.",
+      "products": [
+        {
+          "slug": "double-ferrule-union-01",
+          "name": "Double Ferrule Union",
+          "description": "Double ferrule straight union.",
+          "brochureUrl": "#",
+          "specs": {
+            "category": "Double Ferrule",
+            "tubeODRange": "1/16\" - 2\"",
+            "partType": "Fitting"
+          },
+          "productImageUrl": "/images/product1.jpg",
+          "dimensionalData": [
+            {
+              "partNo": "DFU-04",
+              "tubeOD": "1/4\"",
+              "series": "DF"
+            }
+          ]
+        }
+      ],
+      "groupImageUrl": "/images/product1.jpg"
+    }
+  ]
+}
