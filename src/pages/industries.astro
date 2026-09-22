@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<Layout title="Industries | HIDROPEX">
+  <PageHero 
+    title="Demanding Applications" 
+    description="Our fittings are engineered to perform in the most extreme environments across various industrial sectors." 
+    bgImage="https://www.hidropex.cl/wp-content/uploads/2026/06/DSC02733-640x400.jpg"
+  />
+
+  <section class="section section-bg-gray">
+    <div class="container">
+      <div class="text-center" style="max-width: 700px; margin: 0 auto 3rem auto;">
+        <h2 class="text-xs text-muted" style="margin-bottom: 0.5rem; letter-spacing: 0.05em; font-weight: 600;">PERFORMANCE CRITERIA</h2>
+        <h3 class="text-2xl text-primary" style="margin-bottom: 1rem;">BUILT FOR THE HARSHEST ENVIRONMENTS</h3>
+        <p class="text-sm">Heavy machinery operates under extreme stress. Our connection systems are specifically designed to overcome the three primary causes of hydraulic failure in the field.</p>
+      </div>
+
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <div class="card" style="text-align: center; padding: 2rem;">
+          <div style="width: 48px; height: 48px; margin: 0 auto 1.5rem auto; color: var(--color-primary);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <h4 class="text-lg text-primary" style="margin-bottom: 0.5rem; font-weight: 700;">High Vibration</h4>
+          <p class="text-sm text-muted">Soft-seal technologies like ORFS and DKO guarantee zero leakage even under constant mechanical vibration and impulse shock.</p>
+        </div>
+        <div class="card" style="text-align: center; padding: 2rem;">
+          <div style="width: 48px; height: 48px; margin: 0 auto 1.5rem auto; color: var(--color-primary);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg>
+          </div>
+          <h4 class="text-lg text-primary" style="margin-bottom: 0.5rem; font-weight: 700;">Extreme Temperatures</h4>
+          <p class="text-sm text-muted">Available with FKM (Viton) seals, our fittings maintain structural integrity in extreme heat or sub-zero arctic conditions.</p>
+        </div>
+        <div class="card" style="text-align: center; padding: 2rem;">
+          <div style="width: 48px; height: 48px; margin: 0 auto 1.5rem auto; color: var(--color-primary);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+          </div>
+          <h4 class="text-lg text-primary" style="margin-bottom: 0.5rem; font-weight: 700;">Corrosive Environments</h4>
+          <p class="text-sm text-muted">Advanced Zinc-Nickel plating provides up to 1000 hours of red rust resistance for marine and mining applications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+        <div class="ind-card" style="border-radius: var(--radius-sm); overflow: hidden; position: relative;">
+          <div class="img-box" style="aspect-ratio: 4/5; padding: 0;">
+            <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/ASITENCIA-TECNICA-2-611x400.png" alt="Agriculture" style="width: 100%; height: 100%; object-fit: cover;" />
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,26,36,0.9), transparent 60%);"></div>
+            <h3 class="text-xl text-white" style="position: absolute; bottom: 1.5rem; left: 1.5rem; font-weight: 600;">AGRICULTURE</h3>
+          </div>
+        </div>
+        <div class="ind-card" style="border-radius: var(--radius-sm); overflow: hidden; position: relative;">
+          <div class="img-box" style="aspect-ratio: 4/5; padding: 0;">
+            <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/DSC02733-640x400.jpg" alt="Construction" style="width: 100%; height: 100%; object-fit: cover;" />
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,26,36,0.9), transparent 60%);"></div>
+            <h3 class="text-xl text-white" style="position: absolute; bottom: 1.5rem; left: 1.5rem; font-weight: 600;">CONSTRUCTION</h3>
+          </div>
+        </div>
+        <div class="ind-card" style="border-radius: var(--radius-sm); overflow: hidden; position: relative;">
+          <div class="img-box" style="aspect-ratio: 4/5; padding: 0;">
+            <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/1780319596630-640x400.jpg" alt="Mining" style="width: 100%; height: 100%; object-fit: cover;" />
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,26,36,0.9), transparent 60%);"></div>
+            <h3 class="text-xl text-white" style="position: absolute; bottom: 1.5rem; left: 1.5rem; font-weight: 600;">MINING</h3>
+          </div>
+        </div>
+        <div class="ind-card" style="border-radius: var(--radius-sm); overflow: hidden; position: relative;">
+          <div class="img-box" style="aspect-ratio: 4/5; padding: 0;">
+            <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/DSC02870-640x400.jpg" alt="Material Handling" style="width: 100%; height: 100%; object-fit: cover;" />
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,26,36,0.9), transparent 60%);"></div>
+            <h3 class="text-xl text-white" style="position: absolute; bottom: 1.5rem; left: 1.5rem; font-weight: 600;">MATERIAL HANDLING</h3>
+          </div>
+        </div>
+        <div class="ind-card" style="border-radius: var(--radius-sm); overflow: hidden; position: relative;">
+          <div class="img-box" style="aspect-ratio: 4/5; padding: 0;">
+            <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/IMAGENESSERVICIO-TERRENO-2-2-611x400.png" alt="Industrial" style="width: 100%; height: 100%; object-fit: cover;" />
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,26,36,0.9), transparent 60%);"></div>
+            <h3 class="text-xl text-white" style="position: absolute; bottom: 1.5rem; left: 1.5rem; font-weight: 600;">INDUSTRIAL</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<style>
+  .contact-form-card {
+    padding: 3rem;
+  }
+  @media (max-width: 768px) {
+    .contact-form-card {
+      padding: 1.5rem;
+    }
+    .contact-info-col {
+      padding: 1.5rem !important;
+    }
+  }
+</style>
+
+<Layout title="Contact Us & Request Quote | HIDROPEX">
+  <PageHero 
+    title="Contact & Request Quote" 
+    description="Connect with our engineering team for technical inquiries, bulk orders, or custom hydraulic solutions." 
+    bgImage="https://www.hidropex.cl/wp-content/uploads/2026/06/DSC02733-640x400.jpg"
+  />
+
+  <section class="section section-bg-gray">
+    <div class="container">
+      <div class="grid-2">
+        <!-- FORM COLUMN -->
+        <div class="card contact-form-card">
+          <h2 class="text-2xl text-primary" style="margin-bottom: 0.5rem;">Get in Touch</h2>
+          <p class="text-sm text-muted" style="margin-bottom: 2rem;">Please fill out the form below. A HIDROPEX representative will respond within 24 hours.</p>
+          
+          <form style="display: flex; flex-direction: column; gap: 1.5rem;" onsubmit="event.preventDefault(); alert('Form submission mocked for demo purposes.');">
+            <div class="grid-2" style="gap: 1.5rem;">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label for="firstName" class="text-xs">First Name *</label>
+                <input type="text" id="firstName" required style="padding: 0.875rem; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.875rem;" />
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label for="lastName" class="text-xs">Last Name *</label>
+                <input type="text" id="lastName" required style="padding: 0.875rem; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.875rem;" />
+              </div>
+            </div>
+
+            <div class="grid-2" style="gap: 1.5rem;">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label for="email" class="text-xs">Corporate Email *</label>
+                <input type="email" id="email" required style="padding: 0.875rem; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.875rem;" />
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label for="phone" class="text-xs">Phone Number</label>
+                <input type="tel" id="phone" style="padding: 0.875rem; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.875rem;" />
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <label for="company" class="text-xs">Company Name *</label>
+              <input type="text" id="company" required style="padding: 0.875rem; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.875rem;" />
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <label for="interest" class="text-xs">Area of Interest</label>
+              <select id="interest" style="padding: 0.875rem; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.875rem; background: white;">
+                <option value="">Select an option...</option>
+                <option value="quote">Request a Quote</option>
+                <option value="technical">Technical Support</option>
+                <option value="distributor">Become a Distributor</option>
+                <option value="other">Other Inquiry</option>
+              </select>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <label for="message" class="text-xs">Message / Part Numbers *</label>
+              <textarea id="message" required rows="5" placeholder="Please list any specific series or part numbers..." style="padding: 0.875rem; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.875rem; resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; justify-content: center;">
+              SUBMIT INQUIRY
+            </button>
+          </form>
+        </div>
+
+        <!-- CONTACT INFO COLUMN -->
+        <div class="contact-info-col" style="padding: 3rem 2rem;">
+          <h2 class="text-2xl text-primary" style="margin-bottom: 2rem;">Global Headquarters</h2>
+          
+          <div style="display: flex; flex-direction: column; gap: 2rem;">
+            <div>
+              <h3 class="text-xs" style="margin-bottom: 0.5rem;">Address</h3>
+              <p class="text-sm" style="color: var(--color-gray-dark); margin: 0; line-height: 1.6;">
+                HIDROPEX GmbH<br/>
+                Industrial Parkway 14<br/>
+                80331 Munich, Germany
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xs" style="margin-bottom: 0.5rem;">Direct Contact</h3>
+              <p class="text-sm" style="color: var(--color-gray-dark); margin: 0; line-height: 1.6;">
+                <strong style="color: var(--color-navy);">Phone:</strong> +49 (0) 89 1234 5678<br/>
+                <strong style="color: var(--color-navy);">Sales:</strong> sales@hidropex.global<br/>
+                <strong style="color: var(--color-navy);">Support:</strong> tech@hidropex.global
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xs" style="margin-bottom: 0.5rem;">Operating Hours</h3>
+              <p class="text-sm" style="color: var(--color-gray-dark); margin: 0; line-height: 1.6;">
+                Monday - Friday<br/>
+                08:00 AM - 17:30 PM (CET)
+              </p>
+            </div>
+            
+            <div style="margin-top: 1rem; padding-top: 2rem; border-top: 1px solid var(--color-border-color);">
+              <h3 class="text-xs" style="margin-bottom: 1rem;">International Distributors</h3>
+              <p class="text-sm" style="color: var(--color-gray-dark); margin-bottom: 1.5rem;">
+                Looking for a local supplier? View our global network of certified distributors.
+              </p>
+              <a href="/company" class="btn btn-outline" style="width: 100%; justify-content: center;">
+                VIEW GLOBAL MAP
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

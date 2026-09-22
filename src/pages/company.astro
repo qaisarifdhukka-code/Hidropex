@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import GlobalPresenceMap from '../components/GlobalPresenceMap.tsx';
+---
+
+<Layout title="Company | HIDROPEX">
+  <PageHero 
+    title="About HIDROPEX" 
+    description="Engineering hydraulic connections since 1978. A legacy of quality, precision, and global reach." 
+    bgImage="https://www.hidropex.cl/wp-content/uploads/2026/06/1780319596630-640x400.jpg"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2 gap-4 items-center">
+        <div>
+          <h2 class="text-xs text-muted" style="margin-bottom: 0.5rem; letter-spacing: 0.05em; font-weight: 600;">WHO WE ARE</h2>
+          <h3 class="text-3xl text-primary" style="margin-bottom: 1.5rem;">ENGINEERED FOR EXCELLENCE.</h3>
+          <p class="text-sm" style="margin-bottom: 1rem; line-height: 1.6;">
+            HIDROPEX was founded on a simple principle: hydraulic systems are only as strong as their weakest connection. For over four decades, we have dedicated ourselves to manufacturing precision tube fittings and fluid power connections that eliminate failure points in critical industrial machinery.
+          </p>
+          <p class="text-sm" style="margin-bottom: 1.5rem; line-height: 1.6;">
+            Today, our products are trusted by leading original equipment manufacturers (OEMs) in agriculture, construction, mining, and heavy industry globally. We don't just supply parts; we provide engineered solutions that guarantee zero-defect performance under the most extreme pressures.
+          </p>
+          <div class="grid grid-2 gap-4" style="margin-top: 2rem;">
+            <div>
+              <div class="text-3xl text-primary" style="font-weight: 700;">45+</div>
+              <div class="text-xs text-muted" style="font-weight: 600;">YEARS EXPERIENCE</div>
+            </div>
+            <div>
+              <div class="text-3xl text-primary" style="font-weight: 700;">10M+</div>
+              <div class="text-xs text-muted" style="font-weight: 600;">PARTS ANNUALLY</div>
+            </div>
+          </div>
+        </div>
+        <div class="img-box" style="aspect-ratio: 4/5; border-radius: var(--radius-md); overflow: hidden;">
+          <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/1780319596630-640x400.jpg" alt="Hidropex Engineering Facility" style="width: 100%; height: 100%; object-fit: cover;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <GlobalPresenceMap client:idle />
+</Layout>

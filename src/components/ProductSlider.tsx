@@ -6,8 +6,7 @@ const productData = [
     { id: '03', family: '03 ORFS', title: 'ORFS FITTINGS', desc: 'O-Ring Face Seal fittings providing leak-free connections for high-vibration applications. Designed for zero-clearance installations.', img: 'https://www.hy-techengineers.com/images/product2.jpg' },
     { id: '04', family: '04 CONVERSION', title: 'CONVERSION ADAPTORS', desc: 'Versatile adaptors to transition between various thread types. Ensuring seamless integration across different fluid handling systems.', img: 'https://www.hy-techengineers.com/images/double-ferrule-compression-fittings1.jpg' },
     { id: '05', family: '05 D. FERRULE', title: 'DOUBLE FERRULE', desc: 'Double ferrule compression fittings for leak-tight gas and fluid connections. Ideal for instrumentation and process control.', img: 'https://www.hidropex.cl/wp-content/uploads/2026/06/DSC02870-640x400.jpg' },
-    { id: '06', family: '06 CUSTOM', title: 'CUSTOM FITTINGS', desc: 'Precision-engineered fittings designed to OEM specifications. Fast prototyping and reliable mass manufacturing.', img: 'https://www.hidropex.cl/wp-content/uploads/2026/06/DSC02733-640x400.jpg' },
-    { id: '07', family: '07 CONNECTOR', title: 'MALE STRAIGHT CONNECTOR', desc: 'Male straight connector is used to connect tubes with a 24° cone end to a female port with metric threads. Designed for high-pressure hydraulic systems, it provides a reliable and leak-free connection.', img: 'https://www.hy-techengineers.com/images/product1.jpg', brochure: 'Male straight connector.pdf' }
+    { id: '06', family: '06 CUSTOM', title: 'CUSTOM FITTINGS', desc: 'Precision-engineered fittings designed to OEM specifications. Fast prototyping and reliable mass manufacturing.', img: 'https://www.hidropex.cl/wp-content/uploads/2026/06/DSC02733-640x400.jpg' }
 ];
 
 export default function ProductSlider() {
@@ -37,8 +36,8 @@ export default function ProductSlider() {
             <div className="container">
                 <div className="flex justify-between items-start" style={{ marginBottom: '1.5rem' }}>
                     <h2 className="text-xs flex flex-col-mobile gap-2" style={{ alignItems: 'flex-start' }}>
-                        <div className="flex items-center gap-2"><span className="text-primary">01</span> PRODUCT RANGE</div>
-                        <span className="text-muted" style={{ fontWeight: 500, fontSize: '0.7rem' }}>HORIZONTAL INDUSTRIAL SLIDER</span>
+                        <div className="flex items-center gap-2"><span className="text-primary">01</span> OUR PRODUCTS</div>
+                        <span className="text-muted" style={{ fontWeight: 500, fontSize: '0.7rem' }}>PRODUCT CATEGORIES</span>
                     </h2>
                     <div className="text-xs">0{currentIndex + 1} / 0{productData.length}</div>
                 </div>
@@ -59,9 +58,9 @@ export default function ProductSlider() {
                         <h3 className="text-2xl text-primary" style={{ marginBottom: '0.5rem' }}>{currentItem.title}</h3>
                         <p className="text-sm" style={{ marginBottom: '1.5rem' }}>{currentItem.desc}</p>
                         <div className="flex gap-2" style={{ flexWrap: 'wrap' }}>
-                            <a href="#conversion" className="btn btn-outline">REQUEST A QUOTE ↗</a>
+                            <a href="/contact" className="btn btn-outline">REQUEST A QUOTE ↗</a>
                             {currentItem.brochure && (
-                                <a href={currentItem.brochure} className="btn btn-primary" target="_blank" rel="noopener noreferrer" download>
+                                <a href="/resources" className="btn btn-primary">
                                     DOWNLOAD BROCHURE ↓
                                 </a>
                             )}

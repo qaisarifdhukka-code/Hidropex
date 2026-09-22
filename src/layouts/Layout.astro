@@ -1,5 +1,12 @@
 ---
 import '../styles/global.css';
+import TopBar from '../components/TopBar.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import GlobalSearchModal from '../components/GlobalSearchModal.tsx';
+import { getAllProductFamilies } from '../utils/productData';
+
+const allFamilies = getAllProductFamilies();
 
 interface Props {
 	title: string;
@@ -23,6 +30,10 @@ const { title, description = "Hydraulic fittings for OEM & Industrial Applicatio
 		<meta name="generator" content={Astro.generator} />
 	</head>
 	<body>
+		<TopBar />
+		<Header />
 		<slot />
+		<Footer />
+		<GlobalSearchModal client:load products={allFamilies} />
 	</body>
 </html>

@@ -7,8 +7,24 @@
     </div>
     <div class="topbar-links">
       <span>ISO • IATF CERTIFIED</span>
-      <a href="#">PRODUCT SEARCH</a>
-      <a href="#" class="text-accent">ENQUIRE ↗</a>
+      <div 
+        onclick="window.dispatchEvent(new Event('open-search'))"
+        style="display: flex; align-items: center; background: #ffffff; border: 1px solid #ffffff; padding: 0.15rem 0.5rem; border-radius: 3px; cursor: text; width: 220px; justify-content: space-between; transition: box-shadow 0.2s;"
+        onmouseover="this.style.boxShadow='0 0 0 2px rgba(255,255,255,0.3)'"
+        onmouseout="this.style.boxShadow='none'"
+      >
+        <div style="display: flex; align-items: center; gap: 0.4rem; color: var(--color-gray-dark); opacity: 0.8;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span style="font-size: 0.65rem; font-weight: 500; text-transform: none; letter-spacing: 0;">Search products...</span>
+        </div>
+        <div style="background: var(--color-bg-gray); color: var(--color-gray-dark); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.6rem; font-weight: 600; letter-spacing: 0; border: 1px solid var(--color-border-color);">
+          Ctrl K
+        </div>
+      </div>
+      <a href="/contact" class="text-accent">ENQUIRE ↗</a>
     </div>
   </div>
 </div>

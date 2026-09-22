@@ -74,10 +74,10 @@ export default function MobileMenu() {
                 </div>
               )}
             </div>
-            <a href="/#capabilities" onClick={toggleMenu}>CAPABILITIES</a>
-            <a href="/#industries" onClick={toggleMenu}>INDUSTRIES</a>
-            <a href="/#company" onClick={toggleMenu}>COMPANY</a>
-            <a href="/#resources" onClick={toggleMenu}>RESOURCES</a>
+            <a href="/capabilities" onClick={toggleMenu}>CAPABILITIES</a>
+            <a href="/industries" onClick={toggleMenu}>INDUSTRIES</a>
+            <a href="/company" onClick={toggleMenu}>COMPANY</a>
+            <a href="/resources" onClick={toggleMenu}>RESOURCES</a>
           </nav>
         </>
       )}

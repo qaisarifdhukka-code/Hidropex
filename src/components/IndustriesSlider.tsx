@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 const indData = [
     { title: 'AGRICULTURE', img: 'https://www.hidropex.cl/wp-content/uploads/2026/06/ASITENCIA-TECNICA-2-611x400.png' },
@@ -9,18 +9,46 @@ const indData = [
 ];
 
 export default function IndustriesSlider() {
+    const sliderRef = useRef<HTMLDivElement>(null);
+    const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        if (isHovered) return;
+
+        const slider = sliderRef.current;
+        if (!slider) return;
+
+        const interval = setInterval(() => {
+            if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10) {
+                slider.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                slider.scrollBy({ left: 316, behavior: 'smooth' });
+            }
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [isHovered]);
+
     return (
         <section id="industries" className="section" style={{ overflow: 'hidden' }}>
             <div className="container">
                 <div className="flex justify-between items-start flex-col-mobile gap-4" style={{ marginBottom: '2rem' }}>
                     <h2 className="text-xs flex flex-col-mobile gap-2" style={{ alignItems: 'flex-start' }}>
-                        <div className="flex items-center gap-2"><span className="text-primary">05</span> DEMANDING APPLICATIONS</div>
+                        <div className="flex items-center gap-2"><span className="text-primary">03</span> DEMANDING APPLICATIONS</div>
                         <span className="text-muted" style={{ fontWeight: 500, fontSize: '0.7rem' }}>INDUSTRIES SERVED</span>
                     </h2>
                     <a href="#company" className="btn btn-ghost text-xs" style={{ whiteSpace: 'nowrap', textAlign: 'right' }}>VIEW ALL INDUSTRIES ↗</a>
                 </div>
 
-                <div className="ind-slider flex gap-4" style={{ overflowX: 'auto', paddingBottom: '1rem', scrollbarWidth: 'none', scrollSnapType: 'x mandatory' }}>
+                <div 
+                    ref={sliderRef}
+                    className="ind-slider flex gap-4" 
+                    style={{ overflowX: 'auto', paddingBottom: '1rem', scrollbarWidth: 'none', scrollSnapType: 'x mandatory' }}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    onTouchStart={() => setIsHovered(true)}
+                    onTouchEnd={() => setIsHovered(false)}
+                >
                     {indData.map((item, i) => (
                         <div key={i} className="ind-card flex-shrink-0" style={{ width: '300px', scrollSnapAlign: 'start' }}>
                             <div className="img-box" style={{ aspectRatio: '4/5', marginBottom: '1rem', borderRadius: 'var(--radius-sm)', overflow: 'hidden', position: 'relative' }}>

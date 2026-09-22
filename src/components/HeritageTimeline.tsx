@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 const timelineData = [
     { year: '1978', subtitle: 'THE BEGINNING', activeTitle: 'FOUNDATION & ORIGINS.', text: 'Hidropex established in Mumbai, India to manufacture precision hydraulic fittings.', img: 'https://www.hidropex.cl/wp-content/uploads/2026/06/DSC02733-640x400.jpg' },
@@ -12,13 +12,33 @@ const timelineData = [
 export default function HeritageTimeline() {
     const [activeIndex, setActiveIndex] = useState(5); // Default to 'TODAY' as in prototype
     const activeItem = timelineData[activeIndex];
+    
+    const [startX, setStartX] = useState<number | null>(null);
+
+    const handlePointerDown = (e: React.PointerEvent) => {
+        setStartX(e.clientX);
+    };
+
+    const handlePointerUp = (e: React.PointerEvent) => {
+        if (startX === null) return;
+        const diff = startX - e.clientX;
+        
+        if (diff > 50) {
+            // Dragged left -> go to next item
+            setActiveIndex(prev => Math.min(prev + 1, timelineData.length - 1));
+        } else if (diff < -50) {
+            // Dragged right -> go to previous item
+            setActiveIndex(prev => Math.max(prev - 1, 0));
+        }
+        setStartX(null);
+    };
 
     return (
         <section id="company" className="section">
             <div className="container">
                 <div className="flex justify-between items-center" style={{ marginBottom: '2rem' }}>
                     <h2 className="text-xs" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                        <span className="text-primary">07</span> ENGINEERING CONNECTIONS SINCE 1978
+                        <span className="text-primary">05</span> ENGINEERING CONNECTIONS SINCE 1978
                     </h2>
                 </div>
 
@@ -48,16 +68,24 @@ export default function HeritageTimeline() {
                     ))}
                 </div>
 
-                <div className="grid grid-2 gap-4 fade-in" key={activeIndex}>
-                    <div className="timeline-img">
-                        <div className="img-box" style={{ aspectRatio: '21/9', borderRadius: 'var(--radius-sm)', padding: 0, overflow: 'hidden' }}>
-                            <img src={activeItem.img} alt={activeItem.activeTitle} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div 
+                    className="timeline-content-wrapper"
+                    onPointerDown={handlePointerDown}
+                    onPointerUp={handlePointerUp}
+                    onPointerLeave={handlePointerUp}
+                    style={{ touchAction: 'pan-y', cursor: startX !== null ? 'grabbing' : 'grab', userSelect: 'none' }}
+                >
+                    <div className="grid grid-2 gap-4 fade-in" key={activeIndex} style={{ pointerEvents: 'none' }}>
+                        <div className="timeline-img">
+                            <div className="img-box" style={{ aspectRatio: '21/9', borderRadius: 'var(--radius-sm)', padding: 0, overflow: 'hidden' }}>
+                                <img src={activeItem.img} alt={activeItem.activeTitle} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </div>
                         </div>
-                    </div>
-                    <div className="card flex flex-col justify-center">
-                        <span className="text-xs text-muted">{activeItem.year === '-' ? activeItem.subtitle : activeItem.year}</span>
-                        <h3 className="text-2xl text-primary" style={{ marginBottom: '1rem' }}>{activeItem.activeTitle}</h3>
-                        <p className="text-sm">{activeItem.text}</p>
+                        <div className="card flex flex-col justify-center">
+                            <span className="text-xs text-muted">{activeItem.year === '-' ? activeItem.subtitle : activeItem.year}</span>
+                            <h3 className="text-2xl text-primary" style={{ marginBottom: '1rem' }}>{activeItem.activeTitle}</h3>
+                            <p className="text-sm">{activeItem.text}</p>
+                        </div>
                     </div>
                 </div>
 

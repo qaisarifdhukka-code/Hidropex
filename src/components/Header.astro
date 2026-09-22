@@ -22,12 +22,12 @@ const isProducts = currentPath.startsWith('/products');
           <a href="#">Conversion Fittings</a>
         </div>
       </div>
-      <a href="/#capabilities">CAPABILITIES</a>
-      <a href="/#industries">INDUSTRIES</a>
-      <a href="/#company">COMPANY</a>
-      <a href="/#resources">RESOURCES</a>
+      <a href="/capabilities" class={currentPath.startsWith('/capabilities') ? 'active' : ''}>CAPABILITIES</a>
+      <a href="/industries" class={currentPath.startsWith('/industries') ? 'active' : ''}>INDUSTRIES</a>
+      <a href="/company" class={currentPath.startsWith('/company') ? 'active' : ''}>COMPANY</a>
+      <a href="/resources" class={currentPath.startsWith('/resources') ? 'active' : ''}>RESOURCES</a>
     </nav>
-    <a href="#conversion" class="btn btn-primary" style="display: inline-flex;">
+    <a href="/contact" class="btn btn-primary" style="display: inline-flex;">
       REQUEST QUOTE
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.25rem; height: 1.25rem;">
         <line x1="5" y1="12" x2="19" y2="12"></line>

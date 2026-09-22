@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import CapabilitiesTabs from '../components/CapabilitiesTabs.tsx';
+import PlantIndex from '../components/PlantIndex.tsx';
+---
+
+<Layout title="Manufacturing Capabilities | HIDROPEX">
+  <PageHero 
+    title="Manufacturing Capabilities" 
+    description="Precision engineering from raw material to finished product. Explore our advanced manufacturing processes." 
+    bgImage="https://www.hidropex.cl/wp-content/uploads/2026/06/ASITENCIA-TECNICA-2-611x400.png"
+  />
+
+  <section class="section section-bg-gray">
+    <div class="container">
+      <div class="grid grid-2 gap-4 items-center">
+        <div>
+          <h2 class="text-xs text-muted" style="margin-bottom: 0.5rem; letter-spacing: 0.05em; font-weight: 600;">OUR APPROACH</h2>
+          <h3 class="text-3xl text-primary" style="margin-bottom: 1.5rem;">PRECISION AT SCALE.</h3>
+          <p class="text-sm" style="margin-bottom: 1rem; line-height: 1.6;">
+            Manufacturing high-pressure hydraulic fittings requires an uncompromising commitment to dimensional accuracy and material integrity. Our manufacturing philosophy integrates advanced CNC automation with rigorous, continuous inspection.
+          </p>
+          <p class="text-sm" style="line-height: 1.6;">
+            From multi-spindle automated lathes to dedicated robotic testing cells, our infrastructure is designed to produce high-volume components without sacrificing the microscopic tolerances required for leak-free fluid power systems.
+          </p>
+        </div>
+        <div class="grid grid-2 gap-2">
+          <div class="img-box" style="aspect-ratio: 1/1; border-radius: var(--radius-sm); overflow: hidden;">
+             <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/ASITENCIA-TECNICA-2-611x400.png" alt="CNC Machining" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <div class="img-box" style="aspect-ratio: 1/1; border-radius: var(--radius-sm); overflow: hidden;">
+             <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/IMAGENESSERVICIO-TERRENO-2-2-611x400.png" alt="Quality Inspection" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CapabilitiesTabs client:idle />
+  <PlantIndex client:idle />
+</Layout>

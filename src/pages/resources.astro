@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import TechnicalResourcesSection from '../components/TechnicalResourcesSection.astro';
+---
+
+<Layout title="Technical Resources | HIDROPEX">
+  <PageHero 
+    title="Technical Resources" 
+    description="Download product catalogs, CAD models, and technical manuals to support your engineering requirements." 
+    bgImage="https://www.hidropex.cl/wp-content/uploads/2026/06/IMAGENESSERVICIO-TERRENO-2-2-611x400.png"
+  />
+
+  <section class="section">
+    <div class="container text-center" style="max-width: 700px; margin: 0 auto;">
+      <h2 class="text-xs text-muted" style="margin-bottom: 0.5rem; letter-spacing: 0.05em; font-weight: 600;">ENGINEERING PORTAL</h2>
+      <h3 class="text-2xl text-primary" style="margin-bottom: 1.5rem;">ACCESS TECHNICAL DOCUMENTATION</h3>
+      <p class="text-sm" style="line-height: 1.6;">
+        We believe in complete transparency and engineering support. Use the portal below to access our full library of 3D CAD models, dimensional datasheets, assembly instructions, and ISO compliance certificates. If you need bespoke engineering support, contact our technical team directly.
+      </p>
+    </div>
+  </section>
+
+  <TechnicalResourcesSection />
+</Layout>
