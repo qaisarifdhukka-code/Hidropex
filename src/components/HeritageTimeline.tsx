@@ -99,8 +99,25 @@ export default function HeritageTimeline() {
                     </div>
                 </div>
 
-                <div className="text-center text-xs text-muted" style={{ marginTop: '2rem' }}>
-                    ‹ DRAG TO EXPLORE ›
+                <div className="flex justify-center gap-4" style={{ marginTop: '2rem' }}>
+                    <button 
+                        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '50%', cursor: 'pointer', transition: 'all 0.2s', width: '44px', height: '44px', flexShrink: 0, boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }} 
+                        onClick={() => setActiveIndex(prev => Math.max(prev - 1, 0))}
+                        onMouseOver={(e) => { e.currentTarget.style.background = '#f1f5f9'; e.currentTarget.style.borderColor = '#94a3b8'; e.currentTarget.style.transform = 'translateX(-2px)'; }}
+                        onMouseOut={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.borderColor = '#cbd5e1'; e.currentTarget.style.transform = 'none'; }}
+                        aria-label="Previous Timeline Item"
+                    >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1e293b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button 
+                        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '50%', cursor: 'pointer', transition: 'all 0.2s', width: '44px', height: '44px', flexShrink: 0, boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }} 
+                        onClick={() => setActiveIndex(prev => Math.min(prev + 1, timelineData.length - 1))}
+                        onMouseOver={(e) => { e.currentTarget.style.background = '#f1f5f9'; e.currentTarget.style.borderColor = '#94a3b8'; e.currentTarget.style.transform = 'translateX(2px)'; }}
+                        onMouseOut={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.borderColor = '#cbd5e1'; e.currentTarget.style.transform = 'none'; }}
+                        aria-label="Next Timeline Item"
+                    >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1e293b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
                 </div>
             </div>
         </section>

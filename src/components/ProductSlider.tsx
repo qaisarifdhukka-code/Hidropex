@@ -23,12 +23,11 @@ export default function ProductSlider() {
 
     // Auto-play effect
     useEffect(() => {
-        if (isHovered) return;
         const timer = setInterval(() => {
             handleNext();
         }, 2000);
         return () => clearInterval(timer);
-    }, [isHovered, currentIndex]);
+    }, [currentIndex]);
 
     const currentItem = productData[currentIndex];
 
