@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const timelineData = [
     { year: '1978', subtitle: 'THE BEGINNING', activeTitle: 'FOUNDATION & ORIGINS.', text: 'Hidropex established in Mumbai, India to manufacture precision hydraulic fittings.', img: 'https://www.hidropex.cl/wp-content/uploads/2026/06/DSC02733-640x400.jpg' },
@@ -14,6 +14,14 @@ export default function HeritageTimeline() {
     const activeItem = timelineData[activeIndex];
     
     const [startX, setStartX] = useState<number | null>(null);
+
+    // Auto-play effect
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setActiveIndex(prev => (prev === timelineData.length - 1 ? 0 : prev + 1));
+        }, 5000);
+        return () => clearInterval(timer);
+    }, [activeIndex]);
 
     const handlePointerDown = (e: React.PointerEvent) => {
         setStartX(e.clientX);

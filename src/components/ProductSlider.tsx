@@ -25,7 +25,7 @@ export default function ProductSlider() {
     useEffect(() => {
         const timer = setInterval(() => {
             handleNext();
-        }, 2000);
+        }, 5000);
         return () => clearInterval(timer);
     }, [currentIndex]);
 
