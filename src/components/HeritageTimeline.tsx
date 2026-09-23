@@ -73,7 +73,7 @@ export default function HeritageTimeline() {
                                 width: '16px', 
                                 height: '16px', 
                                 borderRadius: '50%', 
-                                background: activeIndex === i ? 'var(--color-navy-dark)' : 'var(--color-bg-white)', 
+                                background: activeIndex === i ? 'var(--color-primary)' : 'var(--color-bg-white)', 
                                 border: activeIndex === i ? 'none' : (i < activeIndex ? '2px solid var(--color-primary)' : '2px solid var(--color-border-color)')
                             }}></div>
                             <span className={`text-sm font-bold ${item.year === '-' ? 'text-transparent' : ''}`} style={{ opacity: item.year === '-' ? 0 : 1 }}>
