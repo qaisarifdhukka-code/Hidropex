@@ -10,7 +10,7 @@ const timelineData = [
 ];
 
 export default function HeritageTimeline() {
-    const [activeIndex, setActiveIndex] = useState(5); // Default to 'TODAY' as in prototype
+    const [activeIndex, setActiveIndex] = useState(0); // Start at the beginning
     const activeItem = timelineData[activeIndex];
     
     const [startX, setStartX] = useState<number | null>(null);
@@ -36,14 +36,24 @@ export default function HeritageTimeline() {
     return (
         <section id="company" className="section">
             <div className="container">
-                <div className="flex justify-between items-center" style={{ marginBottom: '2rem' }}>
-                    <h2 className="text-xs" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                        <span className="text-primary">05</span> ENGINEERING CONNECTIONS SINCE 1978
+                <div className="flex flex-col items-center justify-center" style={{ marginBottom: '2.5rem' }}>
+                    <h2 className="text-2xl text-center" style={{ fontWeight: 400, letterSpacing: '0.05em', color: 'var(--color-primary)', margin: 0 }}>
+                        ENGINEERING CONNECTIONS SINCE 1978
                     </h2>
+                    <div style={{ width: '40px', height: '3px', backgroundColor: 'var(--color-primary)', marginTop: '0.75rem' }}></div>
                 </div>
 
                 <div className="timeline-nav flex justify-between" style={{ marginBottom: '2rem', position: 'relative', alignItems: 'flex-start' }}>
-                    <div className="timeline-line"></div>
+                    <div className="timeline-line">
+                        <div 
+                            style={{ 
+                                height: '100%', 
+                                background: 'var(--color-primary)', 
+                                width: `${(activeIndex / (timelineData.length - 1)) * 100}%`,
+                                transition: 'width 0.3s ease'
+                            }} 
+                        />
+                    </div>
                     {timelineData.map((item, i) => (
                         <div 
                             key={i} 

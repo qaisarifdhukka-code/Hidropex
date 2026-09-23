@@ -34,7 +34,7 @@ const { family, seriesName, group, product } = Astro.props;
 ---
 
 <Layout title={`${product.name} | ${family.name} | HIDROPEX`}>
-  <main class="section section-bg-gray" style="min-height: 80vh; padding-top: 4rem;">
+  <main class="section section-bg-gray" style="min-height: 80vh; padding-top: 1.5rem;">
     <div class="container">
       
       <ProductBreadcrumb paths={[
@@ -44,7 +44,7 @@ const { family, seriesName, group, product } = Astro.props;
         { name: product.name }
       ]} />
 
-      <div style="margin-bottom: 2rem;">
+      <div style="margin-bottom: 1rem;">
         <h1 class="text-3xl text-primary" style="margin-bottom: 1rem; font-weight: 700;">{product.name.toUpperCase()}</h1>
         <a href={`/products/${family.slug}/${Astro.params.series}/${group.slug}`} class="text-xs text-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; margin-bottom: 1.5rem; font-weight: 700;">
           <span>←</span> BACK TO {group.name.toUpperCase()}

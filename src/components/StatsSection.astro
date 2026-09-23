@@ -4,11 +4,11 @@
   <div class="container">
     <div class="grid grid-4 grid-4-mobile stats-grid text-white">
       <div class="flex flex-col gap-2 stat-block">
-        <h3 class="text-2xl text-white" style="margin-bottom: 0.5rem; font-weight: 300;">45+</h3>
+        <h3 class="text-2xl text-white counter-element" data-target="45" data-suffix="+" style="margin-bottom: 0.5rem; font-weight: 300;">0+</h3>
         <span class="text-xs" style="color: rgba(255,255,255,0.7);">YEARS OF<br>ENGINEERING EXPERTISE</span>
       </div>
       <div class="flex flex-col gap-2 stat-block">
-        <h3 class="text-2xl text-white" style="margin-bottom: 0.5rem; font-weight: 300;">10M+</h3>
+        <h3 class="text-2xl text-white counter-element" data-target="10" data-suffix="M+" style="margin-bottom: 0.5rem; font-weight: 300;">0M+</h3>
         <span class="text-xs" style="color: rgba(255,255,255,0.7);">FITTINGS PRODUCED<br>ANNUALLY</span>
       </div>
       <div class="flex flex-col gap-2 stat-block">
@@ -16,7 +16,7 @@
         <span class="text-xs" style="color: rgba(255,255,255,0.7);">16949 CERTIFIED<br>MANUFACTURING</span>
       </div>
       <div class="flex flex-col gap-2 stat-block">
-        <h3 class="text-2xl text-white" style="margin-bottom: 0.5rem; font-weight: 300;">50+</h3>
+        <h3 class="text-2xl text-white counter-element" data-target="50" data-suffix="+" style="margin-bottom: 0.5rem; font-weight: 300;">0+</h3>
         <span class="text-xs" style="color: rgba(255,255,255,0.7);">COUNTRIES SUPPLIED<br>GLOBALLY</span>
       </div>
     </div>
@@ -27,3 +27,46 @@
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const counters = document.querySelectorAll('.counter-element');
+    const speed = 100;
+
+    const animateCounters = (entries, observer) => {
+      entries.forEach(entry => {
+        const el = entry.target;
+        const suffix = el.getAttribute('data-suffix') || '';
+
+        if (entry.isIntersecting) {
+          const target = +el.getAttribute('data-target');
+          let count = 0;
+          const inc = target / speed;
+
+          const updateCount = () => {
+            count += inc;
+            if (count < target) {
+              el.innerText = Math.ceil(count) + suffix;
+              requestAnimationFrame(updateCount);
+            } else {
+              el.innerText = target + suffix;
+            }
+          };
+
+          updateCount();
+        } else {
+          // Reset to 0 when scrolled out of view
+          el.innerText = '0' + suffix;
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(animateCounters, {
+      threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+      observer.observe(counter);
+    });
+  });
+</script>

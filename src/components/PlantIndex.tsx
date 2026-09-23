@@ -60,7 +60,7 @@ export default function PlantIndex() {
             <div className="container">
                 <div className="flex items-start" style={{ marginBottom: '2rem' }}>
                     <h2 className="text-xs flex flex-col-mobile gap-2" style={{ alignItems: 'flex-start' }}>
-                        <div className="flex items-center gap-2"><span className="text-primary">04</span> OUR MANUFACTURING NETWORK</div>
+                        <div className="flex items-center gap-2" style={{ letterSpacing: '0.1em' }}>OUR MANUFACTURING NETWORK</div>
                         <span className="text-muted" style={{ fontWeight: 500, fontSize: '0.7rem' }}>PLANT INDEX</span>
                     </h2>
                 </div>

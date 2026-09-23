@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
+import IndustriesSlider from '../components/IndustriesSlider.tsx';
 ---
 
 <Layout title="Industries | HIDROPEX">
@@ -44,45 +45,5 @@ import PageHero from '../components/PageHero.astro';
     </div>
   </section>
 
-  <section class="section" style="padding-top: 2rem;">
-    <div class="container">
-      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-        <div class="ind-card" style="border-radius: var(--radius-sm); overflow: hidden; position: relative;">
-          <div class="img-box" style="aspect-ratio: 4/5; padding: 0;">
-            <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/ASITENCIA-TECNICA-2-611x400.png" alt="Agriculture" style="width: 100%; height: 100%; object-fit: cover;" />
-            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,26,36,0.9), transparent 60%);"></div>
-            <h3 class="text-xl text-white" style="position: absolute; bottom: 1.5rem; left: 1.5rem; font-weight: 600;">AGRICULTURE</h3>
-          </div>
-        </div>
-        <div class="ind-card" style="border-radius: var(--radius-sm); overflow: hidden; position: relative;">
-          <div class="img-box" style="aspect-ratio: 4/5; padding: 0;">
-            <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/DSC02733-640x400.jpg" alt="Construction" style="width: 100%; height: 100%; object-fit: cover;" />
-            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,26,36,0.9), transparent 60%);"></div>
-            <h3 class="text-xl text-white" style="position: absolute; bottom: 1.5rem; left: 1.5rem; font-weight: 600;">CONSTRUCTION</h3>
-          </div>
-        </div>
-        <div class="ind-card" style="border-radius: var(--radius-sm); overflow: hidden; position: relative;">
-          <div class="img-box" style="aspect-ratio: 4/5; padding: 0;">
-            <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/1780319596630-640x400.jpg" alt="Mining" style="width: 100%; height: 100%; object-fit: cover;" />
-            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,26,36,0.9), transparent 60%);"></div>
-            <h3 class="text-xl text-white" style="position: absolute; bottom: 1.5rem; left: 1.5rem; font-weight: 600;">MINING</h3>
-          </div>
-        </div>
-        <div class="ind-card" style="border-radius: var(--radius-sm); overflow: hidden; position: relative;">
-          <div class="img-box" style="aspect-ratio: 4/5; padding: 0;">
-            <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/DSC02870-640x400.jpg" alt="Material Handling" style="width: 100%; height: 100%; object-fit: cover;" />
-            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,26,36,0.9), transparent 60%);"></div>
-            <h3 class="text-xl text-white" style="position: absolute; bottom: 1.5rem; left: 1.5rem; font-weight: 600;">MATERIAL HANDLING</h3>
-          </div>
-        </div>
-        <div class="ind-card" style="border-radius: var(--radius-sm); overflow: hidden; position: relative;">
-          <div class="img-box" style="aspect-ratio: 4/5; padding: 0;">
-            <img src="https://www.hidropex.cl/wp-content/uploads/2026/06/IMAGENESSERVICIO-TERRENO-2-2-611x400.png" alt="Industrial" style="width: 100%; height: 100%; object-fit: cover;" />
-            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,26,36,0.9), transparent 60%);"></div>
-            <h3 class="text-xl text-white" style="position: absolute; bottom: 1.5rem; left: 1.5rem; font-weight: 600;">INDUSTRIAL</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <IndustriesSlider client:visible />
 </Layout>

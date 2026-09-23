@@ -17,7 +17,7 @@ export default function CapabilitiesTabs() {
             <div className="container">
                 <div className="flex justify-between items-start" style={{ marginBottom: '1.5rem' }}>
                     <h2 className="text-xs flex flex-col-mobile gap-2" style={{ alignItems: 'flex-start' }}>
-                        <div className="flex items-center gap-2"><span className="text-primary">03</span> HOW HIDROPEX BUILDS RELIABILITY</div>
+                        <div className="flex items-center gap-2" style={{ letterSpacing: '0.1em' }}>HOW HIDROPEX BUILDS RELIABILITY</div>
                         <span className="text-muted" style={{ fontWeight: 500, fontSize: '0.7rem' }}>HORIZONTAL PROCESS STORY</span>
                     </h2>
                 </div>
@@ -30,7 +30,7 @@ export default function CapabilitiesTabs() {
                             style={{ padding: '0.5rem 1rem', borderColor: activeIndex === i ? 'var(--color-primary)' : 'transparent' }}
                             onClick={() => setActiveIndex(i)}
                         >
-                            {item.id} {item.title}
+                            {item.title}
                         </button>
                     ))}
                 </div>
@@ -40,7 +40,6 @@ export default function CapabilitiesTabs() {
                         <img src={activeItem.img} alt={activeItem.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <div className="flex flex-col gap-2 pl-desktop-2" style={{ maxWidth: '500px' }}>
-                        <span className="text-xs text-muted">STEP {activeItem.id}</span>
                         <h3 className="text-3xl text-primary" style={{ marginBottom: '0.5rem' }}>{activeItem.title}</h3>
                         <p className="text-base text-muted" style={{ lineHeight: 1.5 }}>{activeItem.desc}</p>
                         <div className="flex gap-2" style={{ marginTop: '1rem' }}>

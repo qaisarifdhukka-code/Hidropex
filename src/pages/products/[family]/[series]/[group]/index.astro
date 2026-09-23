@@ -37,7 +37,7 @@ const product = isSingleProduct ? group.products[0] : null;
 ---
 
 <Layout title={`${group.name} | ${family.name} | HIDROPEX`}>
-  <main class="section section-bg-gray" style="min-height: 80vh; padding-top: 4rem;">
+  <main class="section section-bg-gray" style="min-height: 80vh; padding-top: 1.5rem;">
     <div class="container">
       
       <ProductBreadcrumb paths={[
@@ -46,7 +46,7 @@ const product = isSingleProduct ? group.products[0] : null;
         { name: group.name }
       ]} />
 
-      <div style="margin-bottom: 3rem;">
+      <div style="margin-bottom: 1.5rem;">
         <h1 class="text-3xl" style="color: var(--color-navy-dark); margin-bottom: 1rem; font-weight: 700;">{group.name.toUpperCase()}</h1>
         {isSingleProduct && product ? (
           <p class="text-sm text-muted" style="max-width: 800px;">{product.description}</p>

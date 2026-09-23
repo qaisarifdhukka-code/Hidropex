@@ -3,25 +3,17 @@ import Layout from '../layouts/Layout.astro';
 import TopBar from '../components/TopBar.astro';
 import Header from '../components/Header.astro';
 import HeroSection from '../components/HeroSection.astro';
-import PromoCardsSection from '../components/PromoCardsSection.astro';
 import ProductSlider from '../components/ProductSlider.tsx';
 import StatsSection from '../components/StatsSection.astro';
-import IndustriesSlider from '../components/IndustriesSlider.tsx';
-import QualityProcessSection from '../components/QualityProcessSection.astro';
 import HeritageTimeline from '../components/HeritageTimeline.tsx';
-import ConversionSection from '../components/ConversionSection.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="HIDROPEX | Precision Connection Technology">
   <HeroSection />
   <ProductSlider client:visible />
-  <PromoCardsSection />
   <StatsSection />
-  <IndustriesSlider client:visible />
-  <QualityProcessSection />
   <HeritageTimeline client:visible />
-  <ConversionSection />
 
   <!-- Floating WhatsApp -->
   <a href="#" class="floating-whatsapp" aria-label="Chat on WhatsApp" style="position: fixed; bottom: 1.5rem; left: 1.5rem; background-color: #25d366; color: white; width: 3.5rem; height: 3.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 1000; transition: transform 0.2s;">

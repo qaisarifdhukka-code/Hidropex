@@ -5,9 +5,9 @@ const currentPath = Astro.url.pathname;
 const isProducts = currentPath.startsWith('/products');
 ---
 <header class="header">
-  <div class="container flex items-center justify-between" style="height: 5rem;">
+  <div class="container flex items-center justify-between py-4">
     <a href="/" class="logo text-primary flex items-center" style="font-weight: 900; font-size: 1.5rem; letter-spacing: -0.05em; gap: 0.5rem;">
-      <img src="/logo-hidropex.png" alt="HIDROPEX" style="height: 48px; object-fit: contain;">
+      <img src="/logo-hidropex.png" alt="HIDROPEX" style="height: 80px; object-fit: contain; max-width: 100%;">
     </a>
     <nav class="nav-links flex items-center">
       <div class="dropdown">

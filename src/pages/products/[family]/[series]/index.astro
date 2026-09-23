@@ -30,7 +30,7 @@ const activeGroups = family.groups.filter(g => g.series === seriesName);
 ---
 
 <Layout title={`${seriesName} | ${family.name} | HIDROPEX`}>
-  <main class="section section-bg-gray" style="min-height: 80vh; padding-top: 4rem;">
+  <main class="section section-bg-gray" style="min-height: 80vh; padding-top: 1.5rem;">
     <div class="container">
       
       <ProductBreadcrumb paths={[
@@ -38,7 +38,7 @@ const activeGroups = family.groups.filter(g => g.series === seriesName);
         { name: seriesName }
       ]} />
 
-      <div style="margin-bottom: 3rem;">
+      <div style="margin-bottom: 1.5rem;">
         <h1 class="text-3xl" style="color: var(--color-navy-dark); margin-bottom: 1rem; font-weight: 700;">{family.name.toUpperCase()} - {seriesName.toUpperCase()}</h1>
         <p class="text-sm text-muted" style="max-width: 800px;">Browse our range of product groups within the {seriesName} category.</p>
       </div>

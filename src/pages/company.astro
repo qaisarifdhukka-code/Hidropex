@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
 import GlobalPresenceMap from '../components/GlobalPresenceMap.tsx';
+import QualityProcessSection from '../components/QualityProcessSection.astro';
+import ConversionSection from '../components/ConversionSection.astro';
 ---
 
 <Layout title="Company | HIDROPEX">
@@ -25,11 +27,11 @@ import GlobalPresenceMap from '../components/GlobalPresenceMap.tsx';
           </p>
           <div class="grid grid-2 gap-4" style="margin-top: 2rem;">
             <div>
-              <div class="text-3xl text-primary" style="font-weight: 700;">45+</div>
+              <div class="text-3xl text-primary counter-element" data-target="45" data-suffix="+" style="font-weight: 700;">0+</div>
               <div class="text-xs text-muted" style="font-weight: 600;">YEARS EXPERIENCE</div>
             </div>
             <div>
-              <div class="text-3xl text-primary" style="font-weight: 700;">10M+</div>
+              <div class="text-3xl text-primary counter-element" data-target="10" data-suffix="M+" style="font-weight: 700;">0M+</div>
               <div class="text-xs text-muted" style="font-weight: 600;">PARTS ANNUALLY</div>
             </div>
           </div>
@@ -41,5 +43,51 @@ import GlobalPresenceMap from '../components/GlobalPresenceMap.tsx';
     </div>
   </section>
 
+  <QualityProcessSection />
+
   <GlobalPresenceMap client:idle />
+  <ConversionSection />
+
+  <script>
+    document.addEventListener('astro:page-load', () => {
+      const counters = document.querySelectorAll('.counter-element');
+      const speed = 100;
+
+      const animateCounters = (entries, observer) => {
+        entries.forEach(entry => {
+          const el = entry.target;
+          const suffix = el.getAttribute('data-suffix') || '';
+
+          if (entry.isIntersecting) {
+            const target = +el.getAttribute('data-target');
+            let count = 0;
+            const inc = target / speed;
+
+            const updateCount = () => {
+              count += inc;
+              if (count < target) {
+                el.innerText = Math.ceil(count) + suffix;
+                requestAnimationFrame(updateCount);
+              } else {
+                el.innerText = target + suffix;
+              }
+            };
+
+            updateCount();
+          } else {
+            // Reset to 0 when scrolled out of view
+            el.innerText = '0' + suffix;
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(animateCounters, {
+        threshold: 0.5
+      });
+
+      counters.forEach(counter => {
+        observer.observe(counter);
+      });
+    });
+  </script>
 </Layout>

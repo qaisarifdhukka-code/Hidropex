@@ -54,7 +54,7 @@ export default function GlobalPresenceMap() {
             <div className="container">
                 <div className="flex justify-between items-center" style={{ marginBottom: '2rem' }}>
                     <h2 className="text-xs flex flex-col-mobile gap-2" style={{ alignItems: 'flex-start' }}>
-                        <div className="flex items-center gap-2"><span className="text-primary">08</span> GLOBAL PRESENCE</div>
+                        <div className="flex items-center gap-2" style={{ letterSpacing: '0.1em' }}>GLOBAL PRESENCE</div>
                         <span className="text-muted" style={{ fontWeight: 500, fontSize: '0.7rem' }}>BUILT IN INDIA. SUPPLIED ACROSS MARKETS.</span>
                     </h2>
                 </div>

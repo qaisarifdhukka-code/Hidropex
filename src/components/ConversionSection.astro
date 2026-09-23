@@ -2,8 +2,12 @@
 ---
 <section id="conversion" class="section section-bg-gray" style="padding: 3rem 0;">
   <div class="container flex flex-col items-center">
-    <div class="text-xs text-muted" style="margin-bottom: 0.5rem;">06 - CONVERSION</div>
-    <h2 class="text-2xl text-primary" style="margin-bottom: 1.5rem; text-align: center;">START WITH A REQUIREMENT.</h2>
+    <div class="flex justify-center items-center" style="margin-bottom: 0.5rem;">
+      <h2 class="text-2xl" style="font-weight: 700; letter-spacing: 0.05em; color: var(--color-primary); margin: 0; text-transform: uppercase;">
+        CONVERSION
+      </h2>
+    </div>
+    <h3 class="text-2xl text-muted" style="margin-bottom: 2.5rem; text-align: center;">START WITH A REQUIREMENT.</h3>
 
     <div class="grid grid-2 gap-4 w-100" style="width: 100%;">
       <div class="card flex flex-col gap-2" style="height: 100%; padding: 1.5rem;">
@@ -27,20 +31,5 @@
       </div>
     </div>
 
-    <div class="flex flex-col-mobile items-center gap-4" style="margin-top: 2rem; width: 100%; justify-content: center;">
-      <span class="text-sm" style="font-weight: 600;">ALREADY KNOW YOUR PRODUCT OR REQUIREMENT?</span>
-      <form 
-        onsubmit="event.preventDefault(); window.dispatchEvent(new Event('open-search'));"
-        style="display: flex; border: 1px solid var(--color-border-color); border-radius: var(--radius-sm); overflow: hidden; width: 100%; max-width: 400px; background: white;"
-      >
-        <input 
-          type="text" 
-          placeholder="Search products..." 
-          onclick="window.dispatchEvent(new Event('open-search'))"
-          style="padding: 0.75rem 1rem; border: none; flex: 1; outline: none; font-family: inherit; cursor: text;" 
-        />
-        <button type="submit" style="padding: 0 1rem; background: var(--color-bg-gray); border: none; border-left: 1px solid var(--color-border-color); cursor: pointer; color: var(--color-primary); font-weight: bold;">SEARCH →</button>
-      </form>
-    </div>
   </div>
 </section>
