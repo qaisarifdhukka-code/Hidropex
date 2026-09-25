@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
-const productData = [
-    { id: '01', family: 'DIN', title: 'DIN METRIC FITTINGS', desc: 'Hydraulic tube connection systems manufactured for demanding industrial applications. The range includes fittings and connection components for hydraulic systems requiring reliable, repeatable performance.', img: 'https://www.hy-techengineers.com/images/product1.jpg', brochure: 'Male straight connector.pdf' },
+type ProductItem = {
+    id: string;
+    family: string;
+    title: string;
+    desc: string;
+    img: string;
+    brochure?: string;
+};
+
+const productData: ProductItem[] = [
+    { id: '01', family: 'DIN', title: 'DIN METRIC FITTINGS', desc: 'Hydraulic tube connection systems manufactured for demanding industrial applications. The range includes fittings and connection components for hydraulic systems requiring reliable, repeatable performance.', img: 'https://www.hy-techengineers.com/images/product1.jpg' },
     { id: '02', family: 'JIC', title: 'JIC TUBE FITTINGS', desc: 'Standard 37° flare fittings for reliable high-pressure fluid power systems. Engineered for high performance and easy assembly.', img: 'https://www.hy-techengineers.com/images/product3.jpg' },
     { id: '03', family: 'ORFS', title: 'ORFS FITTINGS', desc: 'O-Ring Face Seal fittings providing leak-free connections for high-vibration applications. Designed for zero-clearance installations.', img: 'https://www.hy-techengineers.com/images/product2.jpg' },
     { id: '04', family: 'CONVERSION', title: 'CONVERSION ADAPTORS', desc: 'Versatile adaptors to transition between various thread types. Ensuring seamless integration across different fluid handling systems.', img: 'https://www.hy-techengineers.com/images/double-ferrule-compression-fittings1.jpg' },
