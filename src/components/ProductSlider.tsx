@@ -75,7 +75,7 @@ export default function ProductSlider() {
                         <p className="text-sm" style={{ marginBottom: '1.5rem' }}>{currentItem.desc}</p>
                         <div className="flex gap-2" style={{ flexWrap: 'wrap' }}>
                             <a href="/contact" className="btn btn-outline">REQUEST A QUOTE ↗</a>
-                            <a href="/resources" className="btn btn-primary">
+                            <a href={currentItem.brochure ? `/brochures/${currentItem.brochure}` : '/brochures/Hidropex_Catalogue.pdf'} download className="btn btn-primary">
                                 DOWNLOAD BROCHURE ↓
                             </a>
                         </div>

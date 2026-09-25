@@ -99,7 +99,7 @@ const product = isSingleProduct ? group.products[0] : null;
                   <div class="flex flex-col gap-2 mobile-sticky-cta" style="padding: 1.5rem; border-top: 1px solid var(--color-border-color); background: white;">
                     <a href="#quote" class="btn btn-primary text-center" style="display: flex; justify-content: center; flex: 1;">REQUEST A QUOTE ↗</a>
                     {product.brochureUrl && (
-                      <a href={product.brochureUrl} class="btn btn-outline text-center" style="display: flex; justify-content: center; flex: 1;">DOWNLOAD BROCHURE ↓</a>
+                      <a href={product.brochureUrl} download class="btn btn-outline text-center" style="display: flex; justify-content: center; flex: 1;">DOWNLOAD BROCHURE ↓</a>
                     )}
                   </div>
                 </div>
